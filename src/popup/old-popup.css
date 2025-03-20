@@ -36,18 +36,6 @@ button {
   cursor: pointer;
 }
 
-#btnPatreon {
-  margin-top: 6px;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-}
-
-#btnPatreon:hover i,
-#btnPatreon:hover i::after,
-#btnPatreon:hover i::before {
-  background-color: tomato;
-}
 
 #divOptionsList {
   position: static;
@@ -147,46 +135,6 @@ option {
   left: -4px;
 }
 
-.gg-heart,
-.gg-heart::after {
-  border: 2px solid;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  width: 10px;
-  height: 8px;
-  border-bottom: 0;
-}
-.gg-heart {
-  box-sizing: border-box;
-  position: relative;
-  transform: translate(
-      calc(-10px / 2 * var(--ggs, 1)),
-      calc(-6px / 2 * var(--ggs, 1))
-    )
-    rotate(-45deg) scale(var(--ggs, 1));
-  display: block;
-}
-.gg-heart::after,
-.gg-heart::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-}
-.gg-heart::after {
-  right: -9px;
-  transform: rotate(90deg);
-  top: 5px;
-}
-.gg-heart::before {
-  width: 11px;
-  height: 11px;
-  border-left: 2px solid;
-  border-bottom: 2px solid;
-  left: -2px;
-  top: 3px;
-}
-
 #btnImproveTranslation {
   width: 100%;
   cursor: pointer;
@@ -198,4 +146,25 @@ option {
 #btnImproveTranslation:hover {
   scale: 1.03;
   box-shadow: 0 0 3px -2px black;
+}
+
+
+.settings-icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.settings-icon::before,
+.settings-icon::after {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #333; /* Adjust color and thickness */
+  box-sizing: border-box;
+  animation: rotate 10s linear infinite; /* Animation */
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

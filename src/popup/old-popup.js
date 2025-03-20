@@ -23,6 +23,7 @@ twpConfig
     );
     const divIconTranslate = document.getElementById("divIconTranslate");
     const iconTranslate = document.getElementById("iconTranslate");
+    const btnSettings = document.getElementById("btnSettings");
 
     const lblTranslate = document.getElementById("lblTranslate");
     const lblTranslating = document.getElementById("lblTranslating");
@@ -69,12 +70,7 @@ twpConfig
     cbShowTranslateSelectedButton.checked =
       twpConfig.get("showTranslateSelectedButton") == "yes" ? true : false;
 
-    $("#btnPatreon").onclick = (e) => {
-      window.open("https://www.patreon.com/filipeps", "_blank");
-    };
-
     $("#btnOptionB").innerHTML += ' <i class="arrow down"></i>';
-    $("#btnOptions option[value='donate']").innerHTML += " &#10084;";
 
     var cStyle = getComputedStyle(document.querySelector("#btnOptionB"));
     btnOptions.style.width = parseInt(cStyle.width) + 0 + "px";
@@ -523,6 +519,9 @@ twpConfig
       twpConfig.set("useOldPopup", "no");
       window.location = "popup.html";
     });
+    $("#btnSettings").addEventListener("click", () => {
+      tabsCreate(chrome.runtime.getURL("/options/options.html"));
+});
 
     $("#divIconTranslate").addEventListener("click", () => {
       currentPageTranslatorService = twpConfig.swapPageTranslationService();
@@ -684,14 +683,6 @@ twpConfig
                     );
                   }
                 }
-              );
-              break;
-            case "moreOptions":
-              tabsCreate(chrome.runtime.getURL("/options/options.html"));
-              break;
-            case "donate":
-              tabsCreate(
-                chrome.runtime.getURL("/options/options.html#donation")
               );
               break;
             case "translatePDF":
