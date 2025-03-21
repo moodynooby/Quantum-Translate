@@ -1,5 +1,5 @@
 {
-  "name": "mordern-translate-web-pages",
+  "name": "modern-translate-web-pages",
   "version": "1.0.0",
   "browserslist": [
     "firefox 100",
@@ -22,9 +22,9 @@
     "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-zip": "^5.1.0",
+    "gulp-zip": "^6.1.0",
     "node-file-dialog": "^1.0.3",
-    "webpack": "^5.94.0",
-    "webpack-cli": "^5.0.2"
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
   }
 }

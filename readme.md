@@ -1,5 +1,5 @@
 
-# <img src="https://github.com/FilipePS/Traduzir-paginas-web/blob/master/src/icons/icon-128.png" height="50"> Translate Web Pages
+# <img src="https://github.com/FilipePS/Traduzir-paginas-web/blob/master/src/icons/icon-128.png" height="50">Modern Translate Web Pages
 
 Translate your page in real time using Google, Bing or Yandex.
 
