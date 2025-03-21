@@ -31,12 +31,19 @@ button {
 #btnSwitchInterfaces {
   margin-right: 10px;
   margin-top: 10px;
-  border-radius: 50%;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 5px;
   cursor: pointer;
 }
 
+#btnSettings {
+  margin-top: 3px;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  padding-bottom: 15px;
 
+}
 #divOptionsList {
   position: static;
 }
@@ -100,41 +107,6 @@ option {
 #divIconTranslate > img {
   padding: 0;
 }
-
-.gg-swap {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: scale(var(--ggs, 1));
-  box-shadow: -2px 2px 0, 2px -2px 0;
-  width: 6px;
-  height: 2px;
-}
-
-.gg-swap::after,
-.gg-swap::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-}
-
-.gg-swap::before {
-  border-left: 3px solid;
-  top: -4px;
-  right: -4px;
-}
-
-.gg-swap::after {
-  border-right: 3px solid;
-  bottom: -4px;
-  left: -4px;
-}
-
 #btnImproveTranslation {
   width: 100%;
   cursor: pointer;
@@ -148,23 +120,7 @@ option {
   box-shadow: 0 0 3px -2px black;
 }
 
-
-.settings-icon {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  margin-top: 10px;
-}
-
-.settings-icon::before,
-.settings-icon::after {
-  width: 100%;
-  height: 100%;
-  border: 4px solid #333; /* Adjust color and thickness */
-  box-sizing: border-box;
-  animation: rotate 10s linear infinite; /* Animation */
-}
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.bi-gear {
+  display: block;
+  margin-top: 15px;
 }
