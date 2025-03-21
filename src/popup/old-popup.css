@@ -32,16 +32,17 @@ button {
   margin-right: 10px;
   margin-top: 10px;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
 }
 
 #btnSettings {
-  margin-top: 3px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
-  padding-bottom: 15px;
 
 }
 #divOptionsList {
@@ -120,7 +121,3 @@ option {
   box-shadow: 0 0 3px -2px black;
 }
 
-.bi-gear {
-  display: block;
-  margin-top: 15px;
-}
