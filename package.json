@@ -2,8 +2,7 @@
   "name": "modern-translate-web-pages",
   "version": "1.0.0",
   "browserslist": [
-    "firefox 63",
-    "chrome 70"
+    "firefox 63"
   ],
   "scripts": {
     "build": "npx gulp",
