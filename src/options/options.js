@@ -18,44 +18,6 @@ setTimeout(() => {
           "#EXTENSION_VERSION#",
           "<b>" + chrome.runtime.getManifest().version + "</b>"
         );
-      document.getElementById("_donationText").textContent =
-        twpI18n.getMessage("donationText");
-      document.getElementById("_donatewithpaypal").textContent =
-        twpI18n.getMessage("donatewithpaypal");
-
-      document.getElementById("_donationRecipient").textContent =
-        twpI18n.getMessage("msgDonationRecipient");
-      document.getElementById("_donationRecipient").innerHTML = document
-        .getElementById("_donationRecipient")
-        .textContent.replace(
-          "#EXTENSION_NAME#",
-          "<b>" + chrome.runtime.getManifest().name + "</b>"
-        );
-
-      // donation options
-      if (navigator.language === "pt-BR") {
-        $("#_currency").value = "BRL";
-        $("#_donateInUSD").style.display = "none";
-      } else {
-        $("#_currency").value = "USD";
-        $("#_donateInBRL").style.display = "none";
-      }
-
-      $("#_currency").onchange = (e) => {
-        if (e.target.value === "BRL") {
-          $("#_donateInUSD").style.display = "none";
-          $("#_donateInBRL").style.display = "block";
-        } else {
-          $("#_donateInUSD").style.display = "block";
-          $("#_donateInBRL").style.display = "none";
-        }
-      };
-
-      const donationOverflow = document.getElementById("donationOverflow");
-      setTimeout(() => {
-        donationOverflow.style.display = "none";
-      }, 1000);
-      donationOverflow.style.display = "block";
     });
 }, 800);
 
@@ -120,9 +82,6 @@ twpConfig
         $("#privacy"),
         $("#storage"),
         $("#others"),
-        $("#experimental"),
-        $("#donation"),
-        $("#release_notes"),
       ];
       divs.forEach((element) => {
         element.style.display = "none";
@@ -136,25 +95,12 @@ twpConfig
       $('a[href="' + hash + '"]').classList.add("w3-light-grey");
 
       let text;
-      if (hash === "#donation") {
-        text = twpI18n.getMessage("lblMakeDonation");
-      } else if (hash === "#release_notes") {
-        text = twpI18n.getMessage("lblReleaseNotes");
-      } else {
-        text = twpI18n.getMessage("lblSettings");
-      }
       $("#itemSelectedName").textContent = text;
 
       if (sideBarIsVisible) {
         $("#menuContainer").classList.toggle("change");
         $("#sideBar").style.display = "none";
         sideBarIsVisible = false;
-      }
-
-      if (hash === "#release_notes") {
-        $("#btnPatreon").style.display = "none";
-      } else {
-        $("#btnPatreon").style.display = "block";
       }
 
       if (hash === "#translations") {
@@ -1276,10 +1222,7 @@ twpConfig
     };
 
     // others options
-    $("#showReleaseNotes").onchange = (e) => {
-      twpConfig.set("showReleaseNotes", e.target.value);
-    };
-    $("#showReleaseNotes").value = twpConfig.get("showReleaseNotes");
+    $("#showReleaseNotes").value = "no"; // Always set to "no" regardless of stored value
 
     $("#whenShowMobilePopup").onchange = (e) => {
       twpConfig.set("whenShowMobilePopup", e.target.value);
@@ -1525,24 +1468,6 @@ twpConfig
       $("#googleTtsProxyServer").value = googleProxy.ttsServer;
     }
 
-    // donation options
-    if (navigator.language === "pt-BR") {
-      $("#currency").value = "BRL";
-      $("#donateInUSD").style.display = "none";
-    } else {
-      $("#currency").value = "USD";
-      $("#donateInBRL").style.display = "none";
-    }
-
-    $("#currency").onchange = (e) => {
-      if (e.target.value === "BRL") {
-        $("#donateInUSD").style.display = "none";
-        $("#donateInBRL").style.display = "block";
-      } else {
-        $("#donateInUSD").style.display = "block";
-        $("#donateInBRL").style.display = "none";
-      }
-    };
   });
 
 window.scrollTo({

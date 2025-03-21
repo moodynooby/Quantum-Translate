@@ -26,17 +26,10 @@
       <a href="#others" class="w3-bar-item w3-button" data-i18n="lblOthers">Others</a>
       <a href="#experimental" class="w3-bar-item w3-button" data-i18n="lblExperimental">Experimental</a>
     </div>
-    <b><a href="#donation" class="w3-bar-item w3-button w3-padding"><span data-i18n="lblMakeDonation">Make a
-          donation</span> &#10084;</a></b>
-    <a href="#release_notes" class="w3-bar-item w3-button w3-padding" data-i18n="lblReleaseNotes">Release Notes</a>
-    <a href="https://github.com/FilipePS/Traduzir-paginas-web/issues" target="blank"
-      class="w3-bar-item w3-button w3-padding" data-i18n="lblReport">Report a problem</a>
-    <a href="https://crowdin.com/project/translate-web-pages" target="blank" class="w3-bar-item w3-button w3-padding"
-      data-i18n="lblTranslateInterface">Translate the interface</a>
   </nav>
 
   <header class="w3-bar w3-top w3-black w3-hide-large w3-xlarge" id="header">
-    <div class="w3-bar-item w3-padding-20 w3-wide">TWP</div>
+    <div class="w3-bar-item w3-padding-20 w3-wide">Mordern-TWP</div>
     <a class="w3-bar-item w3-button w3-padding-24 w3-right" id="btnOpenMenu">
       <div class="menu-container" id="menuContainer">
         <div class="bar1"></div>
@@ -54,10 +47,6 @@
     <header class="w3-container w3-xlarge">
       <p id="itemSelectedName" data-i18n="lblSettings" style="float: left">
         Settings
-      </p>
-      <p style="float: right; display: none" id="btnPatreon">
-        <a href="https://www.patreon.com/filipeps" target="blank" class="patreonButton"><img src="/icons/patreon.png"
-            style="height: 40px" /></a>
       </p>
     </header>
 
@@ -635,100 +624,6 @@
       </div>
 
       <div>
-        <div id="donation" class="w3-container">
-          <section
-            style="background-color: #87CEEB; padding: 20px; border-radius: 20px; box-shadow: 0 0 10px 3px black;">
-            <div style="font-size: 1.2em;">
-              <p style="white-space: pre-line;" data-i18n="donationText">I have been developing, updating, and
-                supporting this
-                extension for over three years. It's amazing to see that we have over 600,000 daily users, and all of
-                these
-                people have been able to migrate to Firefox permanently.
-
-                I aim to release a new version of this extension every month and keep improving it.
-
-                I would be grateful if you could help me financially by becoming a Patreon member and supporting me in
-                bringing improvements to this extension.
-
-                Thank you to everyone who has already contributed to this project.</p>
-
-              <div style="display: flex; justify-content: space-between;">
-                <div>
-                  <a href="https://www.patreon.com/filipeps" target="blank" class="patreonButton"><img
-                      src="/icons/patreon.png" alt="Become a patreon" width="260" /></a>
-                </div>
-
-                <div style="font-size: 0.9em;">
-                  <b>
-                    <div style="display: inline-block" data-i18n="donatewithpaypal">
-                      Donate With PayPal
-                    </div>
-                  </b>
-                  <select id="currency" style="margin-left: 8px">
-                    <option value="USD">USD</option>
-                    <option value="BRL">BRL</option>
-                  </select>
-                  <div id="donateInUSD">
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                      <input type="hidden" name="cmd" value="_s-xclick" />
-                      <input type="hidden" name="hosted_button_id" value="3FH2APUZGCY3A" />
-                      <table>
-                        <tr>
-                          <td>
-                            <input type="hidden" name="on0" value="Donate With Paypal" />
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <select name="os0">
-                              <option value="Maximum">20,00 USD</option>
-                              <option value="Pizza">10,00 USD</option>
-                              <option value="Lunch" selected>5,00 USD</option>
-                              <option value="Coffe">3,00 USD</option>
-                            </select>
-                          </td>
-                        </tr>
-                      </table>
-                      <input type="hidden" name="currency_code" value="USD" />
-                      <input type="image" src="/icons/btn_donate_LG.webp" border="0" name="submit" alt="PayPal" />
-                      <img alt="" border="0" src="/icons/pixel.gif" width="1" height="1" />
-                    </form>
-                  </div>
-
-                  <div id="donateInBRL">
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                      <input type="hidden" name="cmd" value="_s-xclick" />
-                      <input type="hidden" name="hosted_button_id" value="UKVQDPTUB5HTG" />
-                      <table>
-                        <tr>
-                          <td>
-                            <input type="hidden" name="on0" value="Doar com o Paypal" />
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <select name="os0">
-                              <option value="Maximum">50,00 BRL</option>
-                              <option value="Pizza">30,00 BRL</option>
-                              <option value="Lunch" selected>15,00 BRL</option>
-                              <option value="Coffe">5,00 BRL</option>
-                            </select>
-                          </td>
-                        </tr>
-                      </table>
-                      <input type="hidden" name="currency_code" value="BRL" />
-                      <input type="image" src="/icons/btn_donate_LG.webp" border="0" name="submit" alt="PayPal" />
-                      <img alt="" border="0" src="/icons/pixel.gif" width="1" height="1" />
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div id="release_notes" class="w3-container"></div>
-      </div>
     </div>
 
     <script src="/lib/polyfill.js"></script>
