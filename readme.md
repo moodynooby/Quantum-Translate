@@ -1,7 +1,6 @@
 
 # <img src="https://github.com/FilipePS/Traduzir-paginas-web/blob/master/src/icons/icon-128.png" height="50">Modern Translate Web Pages
-
-Translate your page in real time using Google, Bing or Yandex.
+A Mordern Translation Extension for Firefox, Chrome, Edge and Brave.
 
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/FilipePS/Traduzir-paginas-web?label=latest%20version&sort=semver)](https://github.com/FilipePS/Traduzir-paginas-web/releases)
 [![GitHub release date](https://img.shields.io/github/release-date/FilipePS/Traduzir-paginas-web?labely)](https://github.com/FilipePS/Traduzir-paginas-web/latest)
@@ -11,7 +10,7 @@ Translate your page in real time using Google, Bing or Yandex.
 ## Install
 
 ### Firefox
-- Desktop users, download from [Mozilla Addons](https://addons.mozilla.org/firefox/addon/traduzir-paginas-web/).
+- Desktop users, download from [Mozilla Addons]().
 - Android users
   1. Install the latest version of _Firefox (v120+)_.
   2. Open the extension manager.
