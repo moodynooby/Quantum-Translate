@@ -1,9 +1,9 @@
 {
-  "name": "translate-web-pages",
+  "name": "morderns-translate-web-pages",
   "version": "1.0.0",
   "browserslist": [
-    "firefox 63",
-    "chrome 70"
+    "firefox 100",
+    "chrome 100"
   ],
   "scripts": {
     "build": "npx gulp",
