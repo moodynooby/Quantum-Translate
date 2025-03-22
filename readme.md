@@ -1,12 +1,11 @@
 
-# <img src="https://github.com/FilipePS/Traduzir-paginas-web/blob/master/src/icons/icon-128.png" height="50">Modern Translate Web Pages
-A Modern Translation Extension using Google , Bing , Yandex for Firefox (Unofficially for chromium too).
+# <img src="https://github.com/moodynooby/modern_TWP/blob/master/src/icons/icon-128.png" height="50">Modern Translate Web Pages
+A Modern Translation Extension for Firefox (Unofficially for chromium too).
 Main Things Done  
 - cleaned up UI by removing ads for clean experience and mordernising the ui  
 - made the UI faster
-## Install
 
-### Firefox
+### install Firefox
 - Desktop users, download from [Mozilla Addons]().
 
 ## Screenshots
@@ -28,7 +27,7 @@ To translate any website it is necessary to access and modify the text of the we
 
 **How are the pages translated?**
 
-The pages are translated using the Google or Yandex or Bing translation engine (you choose).
+The pages are translated any of the major translation engine 
 
 **And how's my privacy?**
 

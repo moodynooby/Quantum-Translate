@@ -3,8 +3,8 @@
   "default_locale": "en",
   "name": "Modern_TWP - Modern Translate Web Pages",
   "description": "__MSG_extensionDescription__",
-  "version": "1.0.1",
-  "homepage_url": "https://github.com/moodynooby/Mordern_TWP",
+  "version": "1.1.1",
+  "homepage_url": "https://github.com/moodynooby/Modern_TWP",
   "browser_specific_settings": {
     "gecko": {
       "id": "{036a55b4-5e72-4d05-a06c-cba2d2c2134a}",
