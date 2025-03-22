@@ -1,8 +1,8 @@
 {
   "name": "modern-translate-web-pages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "browserslist": [
-    "firefox 63"
+    "firefox 100"
   ],
   "scripts": {
     "build": "npx gulp",

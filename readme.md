@@ -40,3 +40,7 @@ Some pages like [support.mozilla.org](https://support.mozilla.org/) and [addons.
 
 ## Build instructions
 - You can see all the build instructions in the [build-instructions.md](build-instructions.md) file.
+
+
+## Release notes
+- You can see all the release notes in the [release-notes.md](release-notes.md) file.
