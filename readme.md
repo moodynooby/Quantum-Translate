@@ -6,7 +6,7 @@ Main Things Done
 - made the UI faster
 
 ### install Firefox
-- Desktop users, download from [Mozilla Addons]().
+- Desktop users, download from [Mozilla Addons](https://addons.mozilla.org/en-US/firefox/addon/modern-translate-web-pages/).
 
 ## Screenshots
 |                                           Menu 1                                            |                                           Menu 2                                            |                                         Translated                                          |
