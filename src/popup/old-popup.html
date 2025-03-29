@@ -12,8 +12,47 @@
   <main>
     <div class="w3-display-topright">
       <div style="display: flex">
-        <div id="btnSettings" title="Settings" data-i18n-title="btnSettings" class="w3-hover-light-grey">
-          <i class="bi bi-gear"></i>
+        <div id="btnOptionsDiv" >
+          <select id="btnOptions" class="w3-btn w3-padding-small w3-border w3-round" style="display: inline;" size>
+            <option value="options" selected disabled hidden>⋮</option>
+            <option value="changeLanguage" data-i18n="msgChooseAnotherLanguage">
+              Choose another language
+            </option>
+            <option value="alwaysTranslateThisSite" data-i18n="btnAlwaysTranslate">
+              Always translate this site
+            </option>
+            <option value="neverTranslateThisSite" data-i18n="btnNeverTranslate">
+              Never translate this site
+            </option>
+            <option value="neverTranslateThisLanguage" data-i18n="btnNeverTranslateThisLanguage" style="display: none">
+              Never translate this language
+            </option>
+            <optgroup label=""></optgroup>
+            <option data-i18n="lblShowTranslateSelectedButton" value="showTranslateSelectedButton">
+              Show the button to translate the selected text
+            </option>
+            <option data-i18n="lblShowOriginalTextWhenHovering" value="showOriginalTextWhenHovering">
+              Show original text when hovering
+            </option>
+            <option data-i18n="lblShowTranslatedWhenHoveringThisSite" value="showTranslatedWhenHoveringThisSite">
+              Show translation when hovering over this site
+            </option>
+            <option data-i18n="lblShowTranslatedWhenHoveringThisLang" data-i18n-ph-value=""
+              value="showTranslatedWhenHoveringThisLang" hidden>
+              Show translation when hovering over websites in
+            </option>
+            <optgroup label=""></optgroup>
+            <option value="translateInExternalSite" data-i18n="btnOpenOnGoogleTranslate">
+              Open in Google Translate
+            </option>
+            <option value="translatePDF" data-i18n="msgTranslatePDF">Translate PDF</option>
+            <option id="btnSettings"data-i18n-title="btnSettings" >Settings</option>
+              <option data-i18n="msgImproveTranslation" id="btnImproveTranslation">Improve translation</option>
+
+          </select>
+          <!-- <div id="btnOptionB"  class="pointerIgnore w3-btn w3-padding-small w3-border w3-round w3-text-blue" data-i18n="btnOptions">
+            Options2
+          </div> -->
         </div>
         <div class="w3-hover-light-grey" id="btnSwitchInterfaces" title="Switch between simple and complex interface"  data-i18n-title="swapPopup">
           <i class="bi bi-arrow-left-right"></i>
@@ -21,7 +60,7 @@
       </div>
     </div>
 
-    <label id="lblTranslate" class="" style="margin-right: 70px" data-i18n="lblTranslatePageInto">Translate page
+    <label id="lblTranslate" class="" style="margin-right: 85px" data-i18n="lblTranslatePageInto">Translate page
       into?</label>
     <label id="lblTranslating" class="" style="margin-right: 30px" data-i18n="lblTranslating">Translating...</label>
     <label id="lblTranslated" class="" style="margin-right: 60px" data-i18n="lblPageTranslateInto">Page translated
@@ -63,51 +102,7 @@
           data-i18n="btnTryAgain">
           Try Again
         </button>
-        <div id="btnOptionsDiv" style="position: relative; margin-left: 5px">
-          <select id="btnOptions" class="w3-btn w3-padding-small w3-border w3-round" style="display: inline" size>
-            <option value="options" selected disabled hidden>Options</option>
-            <option value="changeLanguage" data-i18n="msgChooseAnotherLanguage">
-              Choose another language
-            </option>
-            <option value="alwaysTranslateThisSite" data-i18n="btnAlwaysTranslate">
-              Always translate this site
-            </option>
-            <option value="neverTranslateThisSite" data-i18n="btnNeverTranslate">
-              Never translate this site
-            </option>
-            <option value="neverTranslateThisLanguage" data-i18n="btnNeverTranslateThisLanguage" style="display: none">
-              Never translate this language
-            </option>
-            <optgroup label=""></optgroup>
-            <option data-i18n="lblShowTranslateSelectedButton" value="showTranslateSelectedButton">
-              Show the button to translate the selected text
-            </option>
-            <option data-i18n="lblShowOriginalTextWhenHovering" value="showOriginalTextWhenHovering">
-              Show original text when hovering
-            </option>
-            <option data-i18n="lblShowTranslatedWhenHoveringThisSite" value="showTranslatedWhenHoveringThisSite">
-              Show translation when hovering over this site
-            </option>
-            <option data-i18n="lblShowTranslatedWhenHoveringThisLang" data-i18n-ph-value=""
-              value="showTranslatedWhenHoveringThisLang" hidden>
-              Show translation when hovering over websites in
-            </option>
-            <optgroup label=""></optgroup>
-            <option value="translateInExternalSite" data-i18n="btnOpenOnGoogleTranslate">
-              Open in Google Translate
-            </option>
-            <option value="translatePDF" data-i18n="msgTranslatePDF">Translate PDF</option>
-          </select>
-          <div id="btnOptionB" style="
-                display: inline;
-                position: absolute;
-                top: -6px;
-                left: 0;
-                background-color: white;
-              " class="pointerIgnore w3-btn w3-padding-small w3-border w3-round w3-text-blue" data-i18n="btnOptions">
-            Options
-          </div>
-        </div>
+        
       </div>
     </div>
 
@@ -118,9 +113,7 @@
         translate the selected text</label>
     </div>
 
-    <div style="margin-right: 6px; margin-top: 20px;">
-      <button data-i18n="msgImproveTranslation" id="btnImproveTranslation">Improve translation</button>
-    </div>
+    
   </main>
 
   <script src="/lib/polyfill.js"></script>

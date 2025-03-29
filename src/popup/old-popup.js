@@ -70,10 +70,10 @@ twpConfig
     cbShowTranslateSelectedButton.checked =
       twpConfig.get("showTranslateSelectedButton") == "yes" ? true : false;
 
-    $("#btnOptionB").innerHTML += ' <i class="arrow down"></i>';
+    // $("#btnOptionB").innerHTML += ' <i class="arrow down"></i>';
 
-    var cStyle = getComputedStyle(document.querySelector("#btnOptionB"));
-    btnOptions.style.width = parseInt(cStyle.width) + 0 + "px";
+    // var cStyle = getComputedStyle(document.querySelector("#btnOptionB"));
+    // btnOptions.style.width = parseInt(cStyle.width) + 0 + "px";
 
     // fill language list
     {

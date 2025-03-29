@@ -36,14 +36,12 @@ button {
   cursor: pointer;
 }
 
-#btnSettings {
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-right: 5px;
+#btnOptions {
+  margin-top: 15px;
+  margin-right: 6px;
   border-radius: 10px;
-  padding: 10px;
   cursor: pointer;
-
+  width: 40px;
 }
 #divOptionsList {
   position: static;
@@ -55,15 +53,9 @@ button {
 #btnRestore,
 #btnTryAgain {
   display: none;
+  margin-top: 10px;
 }
 
-.arrow-down {
-  border: solid #2196f3;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-}
 
 option {
   color: black;
