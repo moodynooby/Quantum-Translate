@@ -70,11 +70,6 @@ twpConfig
     cbShowTranslateSelectedButton.checked =
       twpConfig.get("showTranslateSelectedButton") == "yes" ? true : false;
 
-    // $("#btnOptionB").innerHTML += ' <i class="arrow down"></i>';
-
-    // var cStyle = getComputedStyle(document.querySelector("#btnOptionB"));
-    // btnOptions.style.width = parseInt(cStyle.width) + 0 + "px";
-
     // fill language list
     {
       let langs = twpLang.getLanguageList();
@@ -137,16 +132,12 @@ twpConfig
             #btnSwitchInterfaces:hover {
                 background-color: #454a4d !important;
                 color: rgb(231, 230, 228) !important;
-            }
+            } 
             
-            #selectTargetLanguage, #btnReset, #btnRestore, #btnTryAgain, #btnOptionB, #btnImproveTranslation {
+            #selectTargetLanguage, #btnReset, #btnRestore, #btnTryAgain {
                 color: #55a9ed !important;
                 background-color: #181a1b !important;
                 border: 1px solid #454a4d !important;
-            }
-
-            #btnImproveTranslation {
-              color: rgb(231, 230, 228) !important;
             }
 
             select, option {

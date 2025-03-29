@@ -37,7 +37,7 @@ button {
 }
 
 #btnOptions {
-  margin-top: 15px;
+  margin-top: 10px;
   margin-right: 6px;
   border-radius: 10px;
   cursor: pointer;
@@ -86,30 +86,8 @@ option {
   pointer-events: none;
 }
 
-.arrow {
-  border: solid #2196f3;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.down {
-  transform: rotate(45deg);
-}
-
 #divIconTranslate > img {
   padding: 0;
 }
-#btnImproveTranslation {
-  width: 100%;
-  cursor: pointer;
-  background-color: white;
-  border: 1px solid lightblue;
-  border-radius: 10px;
-}
 
-#btnImproveTranslation:hover {
-  scale: 1.03;
-  box-shadow: 0 0 3px -2px black;
-}
 
