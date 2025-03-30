@@ -7,7 +7,7 @@ twpConfig
   .then(() => twpI18n.updateUiMessages())
   .then(() => {
     twpI18n.translateDocument();
-    const popupSectionCount = 6;
+    const popupSectionCount = 7;
 
     $("#btnImproveTranslation").onclick = () => {
       window.location = "improve-translation.html";
@@ -354,7 +354,7 @@ twpConfig
                     radial-gradient(rgb(231, 230, 228) 2px, transparent 2px);
             }
 
-            #btnSwitchInterfaces:hover, #divMenu:hover {
+            #btnSwitchInterfaces:hover,  {
                 background-color: #454a4d !important;
                 color: rgb(231, 230, 228) !important;
             }
@@ -724,7 +724,6 @@ twpConfig
             "✔ " + textAlways;
         }
 
-        $("option[data-i18n=btnDonate]").innerHTML += " &#10084;";
       }
     );
   });

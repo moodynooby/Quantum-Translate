@@ -43,7 +43,6 @@ body {
 }
 
 #btnMenu {
-  border-radius: 50%;
   position: relative;
   padding: 6px;
   cursor: pointer;
@@ -51,30 +50,21 @@ body {
 }
 
 #btnSwitchInterfaces {
+  margin-right: 5px;
   border-radius: 10px;
-  padding: 5px;
-  cursor: pointer;
-  margin-top: 4px;
+  padding: 10px;
 
 }
+#divMenu {
+  margin-top: 3px;
+  text-align: center;
+}
 
-#btnSettings {
+.w3-button {
   border-radius: 10px;
   padding: 6px;
   cursor: pointer;
-  margin-top: 4px;
-  margin-right: 22px;
-}
 
-
-.menuDot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-image: radial-gradient(black 2px, transparent 2px),
-    radial-gradient(black 2px, transparent 2px),
-    radial-gradient(black 2px, transparent 2px);
-  background-position: center -5px, center center, center 5px;
 }
 
 #iconSwap {
@@ -94,21 +84,13 @@ body {
 }
 
 #btnOptions {
-  appearance: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 24px;
+  position: relative;
   height: 24px;
   border-radius: 10px;
   cursor: pointer;
 
 }
 
-#divMenu {
-  border-radius: 50%;
-}
 
 button span {
   pointer-events: none;

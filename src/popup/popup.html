@@ -10,26 +10,23 @@
 
 <body style="width: 380px;">
     <div class="w3-bar" style="width: 280px;" data-popupPanelSection="0">
-        <button class="w3-bar-item w3-button w3-ripple w3-hover-light-blue w3-buttonSelected"
+        <button class="w3-bar-item w3-button  w3-hover-light-blue w3-buttonSelected"
             style="border-radius: 5px 0px 0px 0px; position: relative;" title="Show original"
             data-i18n-title="btnRestore" value="original"><span data-i18n="btnMobileOriginal">Original</span><span
                 style="font-size: 9px; position: absolute; bottom: 0; left: 5px;"
                 class="w3-text-pale-blue">Unknown</span></button>
-        <button class="w3-bar-item w3-button w3-ripple w3-hover-light-blue" style="border-radius: 0px 5px 0px 0px;"
+        <button class="w3-bar-item w3-button  w3-hover-light-blue" style="border-radius: 0px 5px 0px 0px;"
             title="Translate" data-i18n-title="btnTranslate" value="en">English</button>
     </div>
     <div class="w3-bar" style="width: 280px;" data-popupPanelSection="2">
-        <button class="w3-bar-item w3-button w3-ripple w3-hover-light-blue" style="border-radius: 0px 0px 0px 5px;"
+        <button class="w3-bar-item w3-button  w3-hover-light-blue" style="border-radius: 0px 0px 0px 5px;"
             title="Translate" data-i18n-title="btnTranslate" value="es">Spanish</button>
-        <button class="w3-bar-item w3-button w3-ripple w3-hover-light-blue" style="border-radius: 0px 0px 5px 0px;"
+        <button class="w3-bar-item w3-button  w3-hover-light-blue" style="border-radius: 0px 0px 5px 0px;"
             title="Translate" data-i18n-title="btnTranslate" value="de">German</button>
     </div>
 
     <div class="w3-container w3-margin-top" style="font-weight: 500">
         <div data-popupPanelSection="0">
-            <div style="margin-right: 60px; margin-bottom: 5px;">
-                <button data-i18n="msgImproveTranslation" id="btnImproveTranslation">Improve translation</button>
-            </div>
             <div id="divAlwaysTranslateThisLang">
                 <input type="checkbox" class="w3-check" id="cbAlwaysTranslateThisLang" disabled>
                 <label id="lblAlwaysTranslateThisLang" for="cbAlwaysTranslateThisLang" data-i18n="lblAlwaysTranslate"
@@ -70,6 +67,44 @@
                     in</label>
             </div>
         </div>
+        <div data-popupPanelSection="7">
+            <hr>
+            
+            <button data-i18n="msgTranslatePDF" value="translatePDF" class="w3-button w3-hover-light-grey">Translate PDF</button> <button id="btnSettings" title="Settings" data-i18n-title="btnSettings" class="w3-button w3-hover-light-grey" > Settings      </button>
+             <button class="w3-button w3-hover-light-grey"data-i18n="msgImproveTranslation" id="btnImproveTranslation">Improve translation</button>
+
+                <div  id="divMenu" title="Options"     data-i18n-title="btnOptions">
+                <select id="btnOptions">
+                    <option value="options" selected disabled class="w3-button">More Options  </option>
+                    <option data-i18n="msgChooseAnotherLanguage" value="changeLanguage">Choose another language</option>
+                    <option data-i18n="btnNeverTranslateThisLanguage" value="neverTranslateThisLanguage"
+                        style="display: none;">Never translate this language</option>
+                    <option data-i18n="btnNeverTranslate" value="neverTranslateThisSite">Never translate this site</option>
+                    <option data-i18n="btnAlwaysTranslate" value="alwaysTranslateThisSite" data-popupPanelSection2="1">
+                        Always translate this site</option>
+                    <optgroup label="" data-popupPanelSection2="6"></optgroup>
+                    <option data-i18n="lblShowTranslateSelectedButton" value="showTranslateSelectedButton"
+                        data-popupPanelSection2="3">Show the button to translate the selected text</option>
+                    <option data-i18n="lblShowOriginalTextWhenHovering" value="showOriginalTextWhenHovering"
+                        data-popupPanelSection2="4">Show original text when hovering</option>
+                    <option data-i18n="lblShowTranslatedWhenHoveringThisSite" value="showTranslatedWhenHoveringThisSite"
+                        data-popupPanelSection2="5">Show translation when hovering over this site</option>
+                    <option data-i18n="lblShowTranslatedWhenHoveringThisLang" data-i18n-ph-value=""
+                        value="showTranslatedWhenHoveringThisLang" data-popupPanelSection2="6" hidden>Show translation when
+                        hovering over websites in</option>
+                    <optgroup label="" data-popupPanelSection2="6"></optgroup>
+                    <option data-i18n="btnOpenOnGoogleTranslate" value="translateInExternalSite">Open in Google Translate
+                    </option>
+                </select>
+            </div>
+            
+               
+
+                </div>
+        
+                 
+        </div>
+
     </div>
     </div>
 
@@ -90,43 +125,7 @@
             <i class="bi bi-arrow-left-right"></i>
         </div>
     </div>
-    <div class="w3-display-topright" style="margin-right: 35px; margin-top: 10px; position: absolute;">
-    <div id="btnSettings" title="Settings" data-i18n-title="btnSettings" class="w3-hover-light-grey w3-display-topright" >
-        <i class="bi bi-gear"></i>
-      </div>
-        <div class="w3-hover-light-gray" style="position: relative;" id="divMenu" title="Options"
-            data-i18n-title="btnOptions">
-            <div class="w3-hover-light-grey" style="border-radius: 50%; padding: 5px;" id="btnMenu"
-                style="position: relative;">
-                <div class="menuDot"></div>
-            </div>
-            <select id="btnOptions" style="font-weight: 500; font-size: small;">
-                <option value="options" selected disabled hidden>Options</option>
-                <option data-i18n="msgChooseAnotherLanguage" value="changeLanguage">Choose another language</option>
-                <option data-i18n="btnNeverTranslateThisLanguage" value="neverTranslateThisLanguage"
-                    style="display: none;">Never translate this language</option>
-                <option data-i18n="btnNeverTranslate" value="neverTranslateThisSite">Never translate this site</option>
-                <option data-i18n="btnAlwaysTranslate" value="alwaysTranslateThisSite" data-popupPanelSection2="1">
-                    Always translate this site</option>
-                <optgroup label="" data-popupPanelSection2="6"></optgroup>
-                <option data-i18n="lblShowTranslateSelectedButton" value="showTranslateSelectedButton"
-                    data-popupPanelSection2="3">Show the button to translate the selected text</option>
-                <option data-i18n="lblShowOriginalTextWhenHovering" value="showOriginalTextWhenHovering"
-                    data-popupPanelSection2="4">Show original text when hovering</option>
-                <option data-i18n="lblShowTranslatedWhenHoveringThisSite" value="showTranslatedWhenHoveringThisSite"
-                    data-popupPanelSection2="5">Show translation when hovering over this site</option>
-                <option data-i18n="lblShowTranslatedWhenHoveringThisLang" data-i18n-ph-value=""
-                    value="showTranslatedWhenHoveringThisLang" data-popupPanelSection2="6" hidden>Show translation when
-                    hovering over websites in</option>
-                <optgroup label="" data-popupPanelSection2="6"></optgroup>
-                <option data-i18n="btnOpenOnGoogleTranslate" value="translateInExternalSite">Open in Google Translate
-                </option>
-                <option data-i18n="msgTranslatePDF" value="translatePDF">Translate PDF</option>
-                <option data-i18n="btnDonate" value="donate">Donate</option>
-            </select>
-        </div>
-    </div>
-
+   
     <div class="w3-display-topright" style="margin-right: 15px; margin-top: 45px; position: absolute; cursor: pointer;">
         <div id="divIconTranslate" style="position: relative;" title="Switch between translation services"
             data-i18n-title="swapTranslationService">
