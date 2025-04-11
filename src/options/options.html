@@ -316,24 +316,24 @@
           <option value="no" data-i18n="msgNo">No</option>
         </select>
         <div class="w3-container" id="translateSelectedAdvancedOptions">
-          <input type="checkbox" class="check" id="dontShowIfIsNotValidText" />
+          <input type="checkbox" class="check" id="dontShowIfIsNotValidText" class="w3-check"/>
           <label for="dontShowIfIsNotValidText" data-i18n="dontShowIfIsNotValidText">Do not show if the selected text is
             not valid</label>
           <br />
-          <input type="checkbox" class="check" id="dontShowIfPageLangIsTargetLang" />
+          <input type="checkbox" class="check" id="dontShowIfPageLangIsTargetLang" class="w3-check"/>
           <label for="dontShowIfPageLangIsTargetLang" data-i18n="dontShowIfPageLangIsTargetLang">Do not show if the page
             language is the target language</label>
           <br />
-          <input type="checkbox" class="check" id="dontShowIfPageLangIsUnknown" />
+          <input type="checkbox" class="check" id="dontShowIfPageLangIsUnknown" class="w3-check"/>
           <label for="dontShowIfPageLangIsUnknown" data-i18n="dontShowIfPageLangIsUnknown">Do not show if the page
             language is unknown</label>
           <br />
-          <input type="checkbox" class="check" id="dontShowIfSelectedTextIsTargetLang" />
+          <input type="checkbox" class="check" id="dontShowIfSelectedTextIsTargetLang" class="w3-check"/>
           <label for="dontShowIfSelectedTextIsTargetLang" data-i18n="dontShowIfSelectedTextIsTargetLang">Do not show if
             the selected text language is the target
             language</label>
           <br />
-          <input type="checkbox" class="check" id="dontShowIfSelectedTextIsUnknown" />
+          <input type="checkbox" class="check" id="dontShowIfSelectedTextIsUnknown" class="w3-check"/>
           <label for="dontShowIfSelectedTextIsUnknown" data-i18n="dontShowIfSelectedTextIsUnknown">Do not show if the
             selected text language is unknown</label>
         </div>
@@ -432,13 +432,13 @@
         </p>
         <ul class="w3-container" style="user-select: none; list-style-type: none">
           <li>
-            <label for="translateSelectedWhenPressTwice"><input type="checkbox" id="translateSelectedWhenPressTwice" />
+            <label for="translateSelectedWhenPressTwice"><input type="checkbox" id="translateSelectedWhenPressTwice" class="w3-check"/>
               <span data-i18n="lblTranslateSelectedWhenPressTwice">Translate selected text when pressing
                 <kbd>Ctrl</kbd> twice</span></label>
           </li>
           <li>
             <label for="translateTextOverMouseWhenPressTwice"><input type="checkbox"
-                id="translateTextOverMouseWhenPressTwice" />
+                id="translateTextOverMouseWhenPressTwice" class="w3-check"/>
               <span data-i18n="lblTranslateTextOverMouseWhenPressTwice">Translate the text over the mouse when pressing
                 <kbd>Ctrl</kbd> twice</span></label>
           </li>
@@ -452,16 +452,16 @@
         <div style="margin-top: 10px;">
           <b data-i18n="selectToEnableTranslationService">Select the translation services you want to use</b>
           <div class="w3-container">
-            <label for="btnEnableGoogle" style="user-select: none;"><input type="checkbox" id="btnEnableGoogle" checked>
+            <label for="btnEnableGoogle" style="user-select: none;"><input type="checkbox" id="btnEnableGoogle" checked class="w3-check">
               Google</label>
             <br>
-            <label for="btnEnableBing" style="user-select: none;"><input type="checkbox" id="btnEnableBing" checked>
+            <label for="btnEnableBing" style="user-select: none;"><input type="checkbox" id="btnEnableBing" checked class="w3-check">
               Bing</label>
             <br>
-            <label for="btnEnableYandex" style="user-select: none;"><input type="checkbox" id="btnEnableYandex" checked>
+            <label for="btnEnableYandex" style="user-select: none;"><input type="checkbox" id="btnEnableYandex" checked class="w3-check">
               Yandex</label>
             <hr style="margin: 5px 0;">
-            <label for="btnEnableDeepL" style="user-select: none;"><input type="checkbox" id="btnEnableDeepL" checked>
+            <label for="btnEnableDeepL" style="user-select: none;"><input type="checkbox" id="btnEnableDeepL" checked class="w3-check">
               DeepL</label>
             <br>
           </div>
@@ -508,15 +508,6 @@
       </div>
 
       <div id="others" class="w3-container">
-        <div class="desktopOnly">
-          <p>
-            <b data-i18n="lblShowReleaseNotes">Show release notes when updating</b>
-          </p>
-          <select id="showReleaseNotes" class="w3-select w3-margin">
-            <option value="yes" data-i18n="msgYes">Yes</option>
-            <option value="no" data-i18n="msgNo">No</option>
-          </select>
-        </div>
         <br />
         <p><b data-i18n="msgWhenShowMobilePopup">When to show the popup on mobile devices</b></p>
         <select id="whenShowMobilePopup" class="w3-select w3-margin">
@@ -570,35 +561,35 @@
           <h3>Configure your Libretranslate server for text (not page) translation.</h3>
           <label for="libreURL">Your Server URL</label><br>
           <input type="text" id="libreURL" placeholder="https://my-libretranslate-server.com/translate"
-            style="width: 90%;" autocomplete="off" spellcheck="false"><br>
+            style="width: 90%;" autocomplete="off" spellcheck="false" class="w3-input"><br>
           <br>
           <label for="libreKEY">Your API key</label><br>
           <input type="text" id="libreKEY" placeholder="c02976e6-ec19-11ed-a05b-0242ac120003" style="width: 90%;"
-            autocomplete="off" spellcheck="false"><br>
-          <br>
-          <button id="addLibre">Add Libretranslate</button>
-          <button id="removeLibre">Remove Libretranslate</button>
+            autocomplete="off" spellcheck="false" class="w3-input"><br>
+          <br> 
+          <button id="addLibre" class="w3-button">Add Libretranslate</button>
+          <button id="removeLibre" class="w3-button">Remove Libretranslate</button>
         </div>
         <hr>
         <div>
           <h3>Configure a DeepL Free API API key to translate text (not pages) without opening new tabs.</h3>
           <label for="deeplKEY">Your API key</label><br>
-          <input type="text" id="deeplKEY" placeholder="7cad3e19-32b8-4cac-a03d-64f3c1e1c1be:fx" style="width: 90%;"
-            autocomplete="off" spellcheck="false"><br>
+          <input type="text" id="deeplKEY" placeholder="7cad3e19-32b8-4cac-a03d-69f3c1e1c1be:fx" style="width: 90%;"
+            autocomplete="off" spellcheck="false" class="w3-input"><br>
           <br>
-          <button id="addDeepL">Add DeepL Free API</button>
-          <button id="removeDeepL">Remove DeepL Free API</button>
+          <button id="addDeepL" class="w3-button">Add DeepL Free API</button>
+          <button id="removeDeepL" class="w3-button">Remove DeepL Free API</button>
           <p id="deeplApiResponse"></p>
         </div>
         <hr>
         <div>
           <h4>Show the mobile popup on the desktop</h4>
-          <select id="showMobilePopupOnDesktop">
+          <select id="showMobilePopupOnDesktop" class="w3-select w3-border">
             <option value="no">no</option>
             <option value="yes">yes</option>
           </select>
           <h4>Add padding at the beginning or end of the page</h4>
-          <select id="addPaddingToPage">
+          <select id="addPaddingToPage" class="w3-select w3-border">
             <option value="no">no</option>
             <option value="yes">yes</option>
           </select>
@@ -607,18 +598,18 @@
         <div>
           <p>If you live in a country with a firewall that blocks the Google translation service and have a server to act as a proxy, you can configure it here.</p>
           <p>It is important to make it clear that what you are configuring below is not a regular http/https/socks proxy. It is a server created or shared with you. Translation requests will be sent to this server and the server will need to know how to direct this request to Google's servers.</p>
-          <button style="width: 100%;" id="btnShowProxyConfiguration">Show configuration</button>
+          <button style="width: 100%;" id="btnShowProxyConfiguration" class="w3-button"> Show configuration</button>
           <div id="googleProxyContainer" style="display: none;">
             <label for="googleTranslateProxyServer">Translation Server</label><br>
             <input type="text" id="googleTranslateProxyServer" placeholder="translate.googleapis.com"
-              style="width: 50%;" autocomplete="off" spellcheck="false"><br>
+              style="width: 50%;" autocomplete="off" spellcheck="false" class="w3-input"><br>
             <br>
             <label for="googleTtsProxyServer">Text-to-speech server</label><br>
             <input type="text" id="googleTtsProxyServer" placeholder="translate.google.com" style="width: 50%;"
-              autocomplete="off" spellcheck="false"><br>
+              autocomplete="off" spellcheck="false" class="w3-input"><br>
             <br>
-            <button id="addGoogleProxy">Set Google Proxy</button>
-            <button id="removeGoogleProxy">Remove Google Proxy</button>
+            <button id="addGoogleProxy" class="w3-button">Set Google Proxy</button>
+            <button id="removeGoogleProxy" class="w3-button">Remove Google Proxy</button>
           </div>
         </div>
       </div>
