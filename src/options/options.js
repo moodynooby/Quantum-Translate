@@ -75,13 +75,11 @@ twpConfig
       const hash = location.hash || "#languages";
       const divs = [
         $("#languages"),
-        $("#sites"),
         $("#translations"),
         $("#style"),
         $("#hotkeys"),
         $("#privacy"),
         $("#storage"),
-        $("#others"),
       ];
       divs.forEach((element) => {
         element.style.display = "none";
