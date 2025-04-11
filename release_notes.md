@@ -1,5 +1,8 @@
 ### Release Notes
 
+## 1.5 
+Modernised the settings app to be more efficient and faster
+
 ## 1.2
 Minimized the UI to be more efficient and faster
 
