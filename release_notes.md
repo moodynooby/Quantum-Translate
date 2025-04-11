@@ -1,7 +1,7 @@
 ### Release Notes
 
 ## 1.2
-Minimized the ui to be more efficent and faster
+Minimized the UI to be more efficient and faster
 
 ## 1.1.1
 minor chores
