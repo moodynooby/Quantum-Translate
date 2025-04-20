@@ -5,59 +5,40 @@
   "description": "__MSG_extensionDescription__",
   "version": "2",
   "homepage_url": "https://github.com/moodynooby/Modern_TWP",
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "{036a55b4-5e72-4d05-a06c-cba2d2c2134a}",
-      "strict_min_version": "63.0"
-    }
-  },
+  "update_url": "https://raw.githubusercontent.com/moodynooby/Modern_TWP/master/dist/chromium/updates.xml",
+  "minimum_chrome_version": "70.0",
   "commands": {
     "hotkey-toggle-translation": {
       "suggested_key": {
-        "default": "Ctrl+Alt+T"
+        "default": "Alt+T"
       },
       "description": "__MSG_lblSwitchTranslatedAndOriginal__"
     },
     "hotkey-translate-selected-text": {
       "suggested_key": {
-        "default": "Ctrl+Alt+S"
+        "default": "Alt+S"
       },
       "description": "__MSG_msgTranslateSelectedText__"
     },
     "hotkey-swap-page-translation-service": {
       "suggested_key": {
-        "default": "Ctrl+Alt+Q"
+        "default": "Alt+Q"
       },
       "description": "__MSG_swapTranslationService__"
     },
     "hotkey-show-original": {
-      "suggested_key": {
-        "default": "Shift+Alt+0"
-      },
       "description": "__MSG_lblRestorePageToOriginal__"
     },
     "hotkey-translate-page-1": {
-      "suggested_key": {
-        "default": "Shift+Alt+1"
-      },
       "description": "__MSG_lblTranslatePageToTargetLanguage__ 1"
     },
     "hotkey-translate-page-2": {
-      "suggested_key": {
-        "default": "Shift+Alt+2"
-      },
       "description": "__MSG_lblTranslatePageToTargetLanguage__ 2"
     },
     "hotkey-translate-page-3": {
-      "suggested_key": {
-        "default": "Shift+Alt+3"
-      },
       "description": "__MSG_lblTranslatePageToTargetLanguage__ 3"
     },
     "hotkey-hot-translate-selected-text": {
-      "suggested_key": {
-        "default": "Ctrl+Alt+X"
-      },
       "description": "__MSG_lblHotTranslatedSelectedText__"
     }
   },
@@ -87,15 +68,10 @@
   ],
   "options_ui": {
     "page": "/options/options.html",
-    "open_in_tab": false,
+    "open_in_tab": true,
     "browser_style": false
   },
   "browser_action": {
-    "browser_style": false,
-    "default_icon": "/icons/icon-32.png",
-    "default_title": "__MSG_pageActionTitle__"
-  },
-  "page_action": {
     "browser_style": false,
     "default_icon": "/icons/icon-32.png",
     "default_title": "__MSG_pageActionTitle__"

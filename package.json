@@ -2,7 +2,8 @@
   "name": "modern-translate-web-pages",
   "version": "1.2",
   "browserslist": [
-    "firefox 100"
+    "firefox 63",
+    "chrome 70"
   ],
   "scripts": {
     "build": "npx gulp",
@@ -11,13 +12,14 @@
     "polyfill": "npx webpack --entry=./polyfill.js --output-path=./src/lib --output-filename=polyfill.js -d inline-source-map"
   },
   "dependencies": {
-    "core-js": "^3.26.1"
+    "core-js": "^3.41.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
     "@types/chrome": "^0.0.203",
     "@types/firefox-webext-browser": "^94.0.1",
     "crx3": "^1.1.3",
+    "del": "^8.0.0",
     "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-sourcemaps": "^3.0.0",

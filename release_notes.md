@@ -1,5 +1,6 @@
 ### Release Notes
-
+## 2
+Version for chrome
 ## 1.5 
 Modernised the settings app to be more efficient and faster
 
