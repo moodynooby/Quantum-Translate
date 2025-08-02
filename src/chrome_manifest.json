@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "default_locale": "en",
-  "name": "Modern_TWP - Modern Translate Web Pages",
+  "name": "QuantumTranslate",
   "description": "__MSG_extensionDescription__",
   "version": "2",
   "homepage_url": "https://github.com/moodynooby/Modern_TWP",

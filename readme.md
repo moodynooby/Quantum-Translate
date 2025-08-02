@@ -1,10 +1,10 @@
 
-# <img src="https://github.com/moodynooby/modern_TWP/blob/master/src/icons/icon-128.png" height="50">Modern Translate Web Pages
+# <img src="https://github.com/moodynooby/modern_TWP/blob/master/src/icons/icon-128.png" height="50">Modern Translate Web Pages / Quantum Translate
 A Modern Translation Extension for Firefox (Unofficially for chromium too).
 Main Things Done  
 - cleaned up UI by removing ads for clean experience and mordernising the ui  
 - made the UI faster
-
+- 
 ### install Firefox
 - Desktop users, download from [Mozilla Addons](https://addons.mozilla.org/en-US/firefox/addon/modern-translate-web-pages/).
 

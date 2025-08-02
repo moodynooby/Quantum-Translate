@@ -1,6 +1,6 @@
 {
-  "name": "modern-translate-web-pages",
-  "version": "1.2",
+  "name": "QuantumTranslate",
+  "version": "2",
   "browserslist": [
     "firefox 63",
     "chrome 70"
