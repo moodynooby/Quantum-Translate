@@ -1,6 +1,6 @@
 {
   "name": "QuantumTranslate",
-  "version": "2",
+  "version": "2.1",
   "browserslist": [
     "firefox 63",
     "chrome 70"

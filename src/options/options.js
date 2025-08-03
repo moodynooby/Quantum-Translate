@@ -78,7 +78,6 @@ twpConfig
         $("#translations"),
         $("#style"),
         $("#hotkeys"),
-        $("#privacy"),
         $("#storage"),
       ];
       divs.forEach((element) => {
@@ -86,11 +85,11 @@ twpConfig
       });
 
       document.querySelectorAll("nav a").forEach((a) => {
-        a.classList.remove("w3-paper");
+        a.classList.remove("w3-cobalt");
       });
 
       $(hash).style.display = "block";
-      $('a[href="' + hash + '"]').classList.add("w3-paper");
+      $('a[href="' + hash + '"]').classList.add("w3-cobalt");
 
       let text;
       $("#itemSelectedName").textContent = text;
@@ -105,11 +104,6 @@ twpConfig
         $("#translations").insertBefore(
           $("#selectServiceContainer"),
           $("#translations").firstChild
-        );
-      } else if (hash === "#privacy") {
-        $("#privacy").insertBefore(
-          $("#selectServiceContainer"),
-          $("#privacy").firstChild
         );
       }
     }
@@ -885,8 +879,8 @@ twpConfig
                 <input name="input" class="w3-input w3-border shortcut-input" type="text" readonly placeholder="${enterShortcut}" data-i18n-placeholder="enterShortcut">
                 <p name="error" class="shortcut-error" style="position: absolute;"></p>
             </div>
-            <div class="w3-hover-light-grey shortcut-button" name="removeKey"><i class="gg-trash"></i></div>
-            <div class="w3-hover-light-grey shortcut-button" name="resetKey"><i class="gg-sync"></i></div>
+            <div class="w3-btn shortcut-button" name="removeKey"><img class="shortcut-icon" src="../icons/delete.png"></div>
+            <div class="w3-btn shortcut-button" name="resetKey"><img class="shortcut-icon" src="../icons/undo.png"></div>
         </div>  
         `;
       $("#KeyboardShortcuts").appendChild(li);

@@ -23,6 +23,7 @@ body {
   width: 100px;
   height: 35px;
 }
+
 .menu-container {
   cursor: pointer;
 }
@@ -108,7 +109,6 @@ body {
   right: -50px;
   display: block;
   margin-left: 10px;
-  padding: 10px;
   cursor: pointer;
 }
 
@@ -143,4 +143,20 @@ select {
 
 .w3-check {
   border-radius: 30px;
+}
+
+.w3-select {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.shortcut-icon {
+  transform: scale(var(--ggs, 1));
+  width: 18px;
+  height: 18px;
+}
+.shortcut-icon::after,
+.shortcut-icon::before {
+  width: 0;
+  height: 0;
+  transform: rotate(-45deg);
 }

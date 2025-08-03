@@ -1,6 +1,6 @@
 ### Release Notes
-## 2
-Version for chrome
+## 2 && 2.1
+Rebrand and updated the UI and Graphics
 ## 1.5 
 Modernised the settings app to be more efficient and faster
 
