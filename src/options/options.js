@@ -86,11 +86,11 @@ twpConfig
       });
 
       document.querySelectorAll("nav a").forEach((a) => {
-        a.classList.remove("w3-light-grey");
+        a.classList.remove("w3-paper");
       });
 
       $(hash).style.display = "block";
-      $('a[href="' + hash + '"]').classList.add("w3-light-grey");
+      $('a[href="' + hash + '"]').classList.add("w3-paper");
 
       let text;
       $("#itemSelectedName").textContent = text;

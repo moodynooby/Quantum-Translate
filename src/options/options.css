@@ -23,22 +23,6 @@ body {
   width: 100px;
   height: 35px;
 }
-
-kbd {
-  background-color: #eee;
-  border-radius: 3px;
-  border: 1px solid #b4b4b4;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
-    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
-  color: #333;
-  display: inline-block;
-  font-size: 0.85em;
-  font-weight: 700;
-  line-height: 1;
-  padding: 2px 4px;
-  white-space: nowrap;
-}
-
 .menu-container {
   cursor: pointer;
 }
@@ -46,7 +30,7 @@ kbd {
 .bar1 {
   height: 5px;
   width: 40px;
-  background-color: #fff !important;
+
   border-radius: 12px;
   transition: 400ms ease all;
 }
@@ -54,7 +38,7 @@ kbd {
 .bar2 {
   height: 5px;
   width: 40px;
-  background-color: #fff !important;
+
   border-radius: 12px;
   transition: 400ms ease all;
   margin-top: 3px;
@@ -63,7 +47,7 @@ kbd {
 .bar3 {
   height: 5px;
   width: 40px;
-  background-color: #fff !important;
+
   border-radius: 12px;
   transition: 400ms ease all;
   margin-top: 3px;
@@ -72,7 +56,7 @@ kbd {
 .bar4 {
   height: 5px;
   width: 40px;
-  background-color: #fff !important;
+
   border-radius: 12px;
   transition: 400ms ease all;
   margin-top: -13px;
@@ -81,7 +65,7 @@ kbd {
 .bar5 {
   height: 5px;
   width: 40px;
-  background-color: #fff !important;
+
   border-radius: 12px;
   transition: 400ms ease all;
   margin-top: -5px;
@@ -105,87 +89,6 @@ kbd {
 
 .change .bar5 {
   transform: rotate(-45deg);
-}
-
-.gg-trash {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: scale(var(--ggs, 1));
-  width: 10px;
-  height: 12px;
-  border: 2px solid transparent;
-  box-shadow: 0 0 0 2px, inset -2px 0 0, inset 2px 0 0;
-  border-bottom-left-radius: 1px;
-  border-bottom-right-radius: 1px;
-  margin-top: 4px;
-}
-
-.gg-trash::after,
-.gg-trash::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-}
-
-.gg-trash::after {
-  background: currentColor;
-  border-radius: 3px;
-  width: 16px;
-  height: 2px;
-  top: -4px;
-  left: -5px;
-}
-
-.gg-trash::before {
-  width: 10px;
-  height: 4px;
-  border: 2px solid;
-  border-bottom: transparent;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  top: -7px;
-  left: -2px;
-}
-
-.gg-sync {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: scale(var(--ggs, 1));
-  border-radius: 40px;
-  border: 2px solid;
-  margin: 1px;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  width: 18px;
-  height: 18px;
-}
-
-.gg-sync::after,
-.gg-sync::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  transform: rotate(-45deg);
-}
-
-.gg-sync::before {
-  border-left: 6px solid;
-  bottom: -1px;
-  right: -3px;
-}
-
-.gg-sync::after {
-  border-right: 6px solid;
-  top: -1px;
-  left: -3px;
 }
 
 .shortcut-row {
@@ -236,7 +139,6 @@ select {
 .w3-button {
   border-radius: 10px;
   margin-top: 3px;
-  border: blue dotted 1px;
 }
 
 .w3-check {
