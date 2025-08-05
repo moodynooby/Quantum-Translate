@@ -1,26 +1,4 @@
 "use strict";
-
-setTimeout(() => {
-  fetch("./release-notes/en.html")
-    .then((response) => response.text())
-    .then((responseText) => {
-      window.scrollTo(0, 0);
-      document.getElementById("release_notes").innerHTML = responseText;
-      document.getElementById("_msgHasBeenUpdated").textContent =
-        twpI18n.getMessage("msgHasBeenUpdated");
-      document.getElementById("_msgHasBeenUpdated").innerHTML = document
-        .getElementById("_msgHasBeenUpdated")
-        .textContent.replace(
-          "#EXTENSION_NAME#",
-          "<b>" + chrome.runtime.getManifest().name + "</b>"
-        )
-        .replace(
-          "#EXTENSION_VERSION#",
-          "<b>" + chrome.runtime.getManifest().version + "</b>"
-        );
-    });
-}, 800);
-
 var $ = document.querySelector.bind(document);
 
 twpConfig
@@ -58,19 +36,6 @@ twpConfig
       document.head.appendChild(style);
     }
 
-    let sideBarIsVisible = false;
-    $("#btnOpenMenu").onclick = (e) => {
-      $("#menuContainer").classList.toggle("change");
-
-      if (sideBarIsVisible) {
-        $("#sideBar").style.display = "none";
-        sideBarIsVisible = false;
-      } else {
-        $("#sideBar").style.display = "block";
-        sideBarIsVisible = true;
-      }
-    };
-
     function hashchange() {
       const hash = location.hash || "#languages";
       const divs = [
@@ -93,12 +58,6 @@ twpConfig
 
       let text;
       $("#itemSelectedName").textContent = text;
-
-      if (sideBarIsVisible) {
-        $("#menuContainer").classList.toggle("change");
-        $("#sideBar").style.display = "none";
-        sideBarIsVisible = false;
-      }
 
       if (hash === "#translations") {
         $("#translations").insertBefore(
@@ -875,7 +834,7 @@ twpConfig
       li.innerHTML = `
         <div>${description}</div>
         <div class="shortcut-input-options">
-            <div style="position: relative;">
+            <div style="position: absolute;">
                 <input name="input" class="w3-input w3-border shortcut-input" type="text" readonly placeholder="${enterShortcut}" data-i18n-placeholder="enterShortcut">
                 <p name="error" class="shortcut-error" style="position: absolute;"></p>
             </div>
@@ -1213,9 +1172,6 @@ twpConfig
       }
     };
 
-    // others options
-    $("#showReleaseNotes").value = "no"; // Always set to "no" regardless of stored value
-
     $("#whenShowMobilePopup").onchange = (e) => {
       twpConfig.set("whenShowMobilePopup", e.target.value);
     };
@@ -1410,11 +1366,7 @@ twpConfig
     $("#addPaddingToPage").value = twpConfig.get("addPaddingToPage");
 
     $("#btnShowProxyConfiguration").onclick = (e) => {
-      $("#googleProxyContainer").style.display = "block";
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth",
-      });
+      $("#googleProxyContainer").style.display = "block"
     };
 
     $("#addGoogleProxy").onclick = (e) => {
@@ -1462,6 +1414,3 @@ twpConfig
 
   });
 
-window.scrollTo({
-  top: 0,
-});

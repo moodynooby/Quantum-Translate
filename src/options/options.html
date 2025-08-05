@@ -12,34 +12,19 @@
 </head>
 
 <body class="w3-content" style="max-width: 1200px">
-  <nav class="w3-sidebar w3-bar-block w3-collapse w3-top" style="z-index: 3; width: 300px" id="sideBar">
-    <div class="w3-container w3-display-container w3-padding-16">
-      <h3 class="w3-wide"><b>Quantum Translate</b></h3>
-    </div>
-    <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight: bold">
-      <a href="#languages" class="w3-bar-item w3-button" data-i18n="msgLanguages">Languages</a>
-      <a href="#translations" class="w3-bar-item w3-button" data-i18n="msgTranslations">Translating</a>
-      <a href="#style" class="w3-bar-item w3-button" data-i18n="msgStyle">Appearance </a>
-      <a href="#hotkeys" class="w3-bar-item w3-button desktopOnly" data-i18n="msgHotkeys">Hotkeys</a>
-      <a href="#storage" class="w3-bar-item w3-button" data-i18n="msgStorage">Storage</a>
+  <nav class="w3-sidebar w3-bar-block" style="z-index: 3; width: 10vw; margin-top: 25vh;" id="sideBar">
+    <div class="w3-padding-16 ">
+      <a class="w3-bar-item w3-button" href="#languages"><img src="../icons/translate.png" class="shortcut-icon"></a>
+      <a class="w3-bar-item w3-button" href="#translations"><img src="../icons/translation.png" class="shortcut-icon"></a>
+      <a class="w3-bar-item w3-button" href="#style"><img src="../icons/painting-pallete.png" class="shortcut-icon"></a>
+      <a class="w3-bar-item w3-button" href="#hotkeys" class="desktopOnly"><img src="../icons/key.png" class="shortcut-icon"></a>
+      <a class="w3-bar-item w3-button" href="#storage"><img src="../icons/cloud-server.png" class="shortcut-icon"></a>
     </div>
   </nav>
 
-  <header class="w3-bar w3-top w3-black w3-hide-large w3-xlarge" id="header">
-    <div class="w3-bar-item w3-padding-20 w3-wide">Quantum Translate </div>
-    <a class="w3-bar-item w3-button w3-padding-24 w3-right" id="btnOpenMenu">
-      <div class="menu-container" id="menuContainer">
-        <div class="bar1 w3-asphalt"></div>
-        <div class="bar2 w3-asphalt"></div>
-        <div class="bar3 w3-asphalt"></div>
-        <div class="bar4 w3-asphalt"></div>
-        <div class="bar5 w3-asphalt"></div>
-      </div>
-    </a>
-  </header>
-
-  <div class="w3-main" style="margin-left: 300px">
-    <div class="w3-hide-large" style="margin-top: 83px"></div>
+  <div class="w3-main" style="margin-left: 10vw">
+    <h1>Quantum Translate</h1>
+    <div class="w3-hide-large" style="margin-top: 5vh"></div>
 
     <header class="w3-container w3-xlarge">
       <p id="itemSelectedName" data-i18n="lblSettings" style="float: left">
@@ -49,6 +34,7 @@
 
     <div>
       <div id="languages" class="w3-container">
+        <h1>Languages</h1>
         <p><b data-i18n="msgExtUILanguage">Extension user interface language</b></p>
         <select id="selectUiLanguage" class="w3-select w3-round w3-half  w3-round" style="margin-left: 20px;">
           <option value="default" selected data-i18n="msgDefaultLanguage">Default language</option>
@@ -267,7 +253,30 @@
 
 
       <div id="translations" class="w3-container">
+      
+        <div>
+          <b data-i18n="selectToEnableTranslationService">Select the translation services you want to use</b>
+          <div class="w3-container">
+            <label for="btnEnableGoogle" style="user-select: none;"><input type="checkbox" id="btnEnableGoogle" checked
+                class="w3-check">
+              Google</label>
+            <br>
+            <label for="btnEnableBing" style="user-select: none;"><input type="checkbox" id="btnEnableBing" checked
+                class="w3-check">
+              Bing</label>
+            <br>
+            <label for="btnEnableYandex" style="user-select: none;"><input type="checkbox" id="btnEnableYandex" checked
+                class="w3-check">
+              Yandex</label>
+            <label for="btnEnableDeepL" style="user-select: none;"><input type="checkbox" id="btnEnableDeepL" checked
+                class="w3-check">
+              DeepL</label>
+            <br>
+          </div>
+        </div>
         <div id="selectServiceContainer">
+          <h1>Translating</h1>
+
           <b data-i18n="lblPageTranslationService">Page translation service</b>
           <select id="pageTranslatorService" class="w3-select w3-round">
             <option value="google">Google</option>
@@ -289,26 +298,6 @@
             <option value="bing">Bing</option>
           </select>
           <br />
-        </div>
-        <div style="margin-top: 10px;">
-          <b data-i18n="selectToEnableTranslationService">Select the translation services you want to use</b>
-          <div class="w3-container">
-            <label for="btnEnableGoogle" style="user-select: none;"><input type="checkbox" id="btnEnableGoogle" checked
-                class="w3-check">
-              Google</label>
-            <br>
-            <label for="btnEnableBing" style="user-select: none;"><input type="checkbox" id="btnEnableBing" checked
-                class="w3-check">
-              Bing</label>
-            <br>
-            <label for="btnEnableYandex" style="user-select: none;"><input type="checkbox" id="btnEnableYandex" checked
-                class="w3-check">
-              Yandex</label>
-            <label for="btnEnableDeepL" style="user-select: none;"><input type="checkbox" id="btnEnableDeepL" checked
-                class="w3-check">
-              DeepL</label>
-            <br>
-          </div>
         </div>
         <b data-i18n="useAlternativeService">Silently use an alternate translation service if needed</b>
         <select id="useAlternativeService" class="w3-select w3-round">
@@ -439,6 +428,7 @@
       </div>
 
       <div id="style" class="w3-container">
+        <h1>Appearance</h1>
         <div class="desktopOnly">
           <b data-i18n="lblSelectPopupInterfaceStyle">Select popup interface style</b>
           <select id="useOldPopup" class="w3-select w3-round w3-margin">
@@ -517,6 +507,7 @@
       </div>
 
       <div id="hotkeys" class="w3-container desktopOnly">
+        <h1>Keyboard Shortcuts</h1>
         <button data-i18n="openNativeShortcutManager" id="openNativeShortcutManager"
           class="w3-btn w3-asphalt w3-round  w3-margin" style="width: 60%; max-width: 650px">
           Open native shortcut key manager
@@ -545,6 +536,7 @@
       </div>
 
       <div id="storage" class="w3-container">
+        <h1>Storage</h1>
         <b data-i18n="lblTranslationCache">Translation cache</b>
         <div class="w3-container">
           <span data-i18n="lblStorageUsed">Storage used:</span>
