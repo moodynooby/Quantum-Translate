@@ -3,7 +3,7 @@
   "default_locale": "en",
   "name": "QuantumTranslate",
   "description": "__MSG_extensionDescription__",
-  "version": "2.5",
+  "version": "3",
   "homepage_url": "https://github.com/moodynooby/Modern_TWP",
   "browser_specific_settings": {
     "gecko": {
@@ -73,7 +73,9 @@
     "contextMenus",
     "webRequest"
   ],
-  "optional_permissions": ["webNavigation"],
+  "optional_permissions": [
+    "webNavigation"
+  ],
   "web_accessible_resources": [
     "/icons/icon-32.png",
     "/icons/google-translate-32.png",
@@ -102,13 +104,19 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": [
+        "<all_urls>"
+      ],
       "run_at": "document_start",
       "all_frames": false,
-      "js": ["/contentScript/checkScriptIsInjected.js"]
+      "js": [
+        "/contentScript/checkScriptIsInjected.js"
+      ]
     },
     {
-      "matches": ["<all_urls>"],
+      "matches": [
+        "<all_urls>"
+      ],
       "run_at": "document_start",
       "all_frames": true,
       "match_about_blank": true,
@@ -121,7 +129,9 @@
       ]
     },
     {
-      "matches": ["<all_urls>"],
+      "matches": [
+        "<all_urls>"
+      ],
       "run_at": "document_end",
       "all_frames": true,
       "match_about_blank": true,
@@ -134,16 +144,24 @@
       ]
     },
     {
-      "matches": ["<all_urls>"],
+      "matches": [
+        "<all_urls>"
+      ],
       "run_at": "document_end",
       "all_frames": false,
-      "js": ["/contentScript/popupMobile.js"]
+      "js": [
+        "/contentScript/popupMobile.js"
+      ]
     },
     {
-      "matches": ["https://www.deepl.com/*/translator*"],
+      "matches": [
+        "https://www.deepl.com/*/translator*"
+      ],
       "run_at": "document_end",
       "all_frames": false,
-      "js": ["/contentScript/deepl.js"]
+      "js": [
+        "/contentScript/deepl.js"
+      ]
     }
   ],
   "background": {

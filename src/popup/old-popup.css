@@ -28,21 +28,14 @@ button {
   margin-left: 5px;
 }
 
-#btnSwitchInterfaces {
-  margin-right: 10px;
-  margin-top: 10px;
-  border-radius: 10px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-#btnOptions {
+#btnOptions { 
   margin-top: 10px;
   margin-right: 6px;
   border-radius: 10px;
   cursor: pointer;
   width: 40px;
 }
+
 #divOptionsList {
   position: static;
 }
@@ -86,8 +79,6 @@ option {
   pointer-events: none;
 }
 
-#divIconTranslate > img {
+#divIconTranslate>img {
   padding: 0;
 }
-
-

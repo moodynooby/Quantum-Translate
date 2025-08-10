@@ -279,11 +279,6 @@ function resetPageAction(tabId, forceShow = false) {
         popup: "popup/old-popup.html",
         tabId,
       });
-    } else {
-      chrome.pageAction.setPopup({
-        popup: "popup/popup.html",
-        tabId,
-      });
     }
   }
 }
@@ -297,10 +292,6 @@ function resetBrowserAction(forceShow = false) {
     if (twpConfig.get("useOldPopup") === "yes") {
       chrome.browserAction.setPopup({
         popup: "popup/old-popup.html",
-      });
-    } else {
-      chrome.browserAction.setPopup({
-        popup: "popup/popup.html",
       });
     }
   }
@@ -645,7 +636,7 @@ twpConfig.onReady(() => {
           ) {
             isFirefoxAlpenglowTheme = true;
           }
-        } catch {}
+        } catch { }
         return isFirefoxAlpenglowTheme;
       };
 
@@ -828,10 +819,10 @@ twpConfig.onReady(() => {
         var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
         return result
           ? {
-              r: parseInt(result[1], 16),
-              g: parseInt(result[2], 16),
-              b: parseInt(result[3], 16),
-            }
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16),
+          }
           : null;
       }
 

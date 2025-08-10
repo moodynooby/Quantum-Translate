@@ -14,11 +14,11 @@
 <body class="w3-content" style="max-width: 1200px">
   <nav class="w3-sidebar w3-bar-block" style="z-index: 3; width: 10vw; margin-top: 25vh;" id="sideBar">
     <div class="w3-padding-16 ">
-      <a class="w3-bar-item w3-button" href="#languages"><img src="../icons/translate.png" class="shortcut-icon"></a>
-      <a class="w3-bar-item w3-button" href="#translations"><img src="../icons/translation.png" class="shortcut-icon"></a>
-      <a class="w3-bar-item w3-button" href="#style"><img src="../icons/painting-pallete.png" class="shortcut-icon"></a>
-      <a class="w3-bar-item w3-button" href="#hotkeys" class="desktopOnly"><img src="../icons/key.png" class="shortcut-icon"></a>
-      <a class="w3-bar-item w3-button" href="#storage"><img src="../icons/cloud-server.png" class="shortcut-icon"></a>
+      <a class="w3-bar-item w3-button" href="#languages" data-i18n="msgLanguages">Languages</a>
+      <a class="w3-bar-item w3-button" href="#translations" data-i18n="msgTranslations">Translations</a>
+      <a class="w3-bar-item w3-button" href="#style" data-i18n="msgStyle">Appearance</a>
+      <a class="w3-bar-item w3-button" href="#hotkeys" class="desktopOnly" data-i18n="msgHotkeys">Hotkeys</a>
+      <a class="w3-bar-item w3-button" href="#storage" data-i18n="msgStorage">Storage</a>
     </div>
   </nav>
 
@@ -34,7 +34,7 @@
 
     <div>
       <div id="languages" class="w3-container">
-        <h1>Languages</h1>
+        <h1 data-i18n="msgLanguages">Languages</h1>
         <p><b data-i18n="msgExtUILanguage">Extension user interface language</b></p>
         <select id="selectUiLanguage" class="w3-select w3-round w3-half  w3-round" style="margin-left: 20px;">
           <option value="default" selected data-i18n="msgDefaultLanguage">Default language</option>
@@ -253,7 +253,8 @@
 
 
       <div id="translations" class="w3-container">
-      
+        <h1 data-i18n="msgTranslations">Translations</h1>
+
         <div>
           <b data-i18n="selectToEnableTranslationService">Select the translation services you want to use</b>
           <div class="w3-container">
@@ -275,7 +276,6 @@
           </div>
         </div>
         <div id="selectServiceContainer">
-          <h1>Translating</h1>
 
           <b data-i18n="lblPageTranslationService">Page translation service</b>
           <select id="pageTranslatorService" class="w3-select w3-round">
@@ -303,7 +303,7 @@
         <select id="useAlternativeService" class="w3-select w3-round">
           <option value="yes" data-i18n="msgYes">Yes</option>
           <option value="no" data-i18n="msgNo">No</option>
-          </select>
+        </select>
         <br />
         <b data-i18n="lblTtsSpeed">Text-to-speech audio speed</b>
         <input id="ttsSpeed" type="range" min="0.25" max="2.0" step="0.25" value="1.0" />
@@ -320,7 +320,7 @@
         </select>
         <div class="w3-container" id="translateSelectedAdvancedOptions">
           <input type="checkbox" class="check" id="dontShowIfIsNotValidText" class="w3-check" />
-          <label for="dontShowIfIsNotValidText" data-i18n="dontShowIfIsNotValidText">Do not show if  the selected text is
+          <label for="dontShowIfIsNotValidText" data-i18n="dontShowIfIsNotValidText">Do not show if the selected text is
             not valid</label>
           <br />
           <input type="checkbox" class="check" id="dontShowIfPageLangIsTargetLang" class="w3-check" />
@@ -381,62 +381,43 @@
           <option value="no" data-i18n="msgNo">No</option>
         </select>
         <br />
-        <h3>Configure your Libretranslate server for text (not page) translation.</h3>
-        <label for="libreURL">Your Server URL</label><br>
-        <input type="text" id="libreURL" placeholder="https://my-libretranslate-server.com/translate"
-          style="width: 90%;" autocomplete="off" spellcheck="false" class="w3-input"><br>
-        <br>
-        <label for="libreKEY">Your API key</label><br>
-          <input type="text" id="libreKEY" placeholder="c02976e6-ec19-11ed-a05b-0242ac120003" style="width: 90%;"
+        <div>
+          <h3>Configure a DeepL Free API API key to translate text (not pages) without opening new tabs.</h3>
+          <label for="deeplKEY">Your API key</label><br>
+          <input type="text" id="deeplKEY" placeholder="7cad3e19-32b8-4cac-a03d-69f3c1e1c1be:fx" style="width: 90%;"
             autocomplete="off" spellcheck="false" class="w3-input"><br>
           <br>
-          <button id="addLibre" class="w3-button w3-asphalt">Add Libretranslate</button>
-          <button id="removeLibre" class="w3-button w3-asphalt">Remove Libretranslate</button>
-          <div>
-            <h3>Configure a DeepL Free API API key to translate text (not pages) without opening new tabs.</h3>
-            <label for="deeplKEY">Your API key</label><br>
-            <input type="text" id="deeplKEY" placeholder="7cad3e19-32b8-4cac-a03d-69f3c1e1c1be:fx" style="width: 90%;"
+          <button id="addDeepL" class="w3-button w3-asphalt">Add DeepL Free API</button>
+          <button id="removeDeepL" class="w3-button w3-asphalt">Remove DeepL Free API</button>
+          <p id="deeplApiResponse"></p>
+        </div>
+        <div>
+          <p>If you live in a country with a firewall that blocks the Google translation service and have a server to
+            act as a proxy, you can configure it here.</p>
+          <p>It is important to make it clear that what you are configuring below is not a regular http/https/socks
+            proxy. It is a server created or shared with you. Translation requests will be sent to this server and the
+            server will need to know how to direct this request to Google's servers.</p>
+          <button style="width: 100%;" id="btnShowProxyConfiguration" class="w3-button w3-asphalt"> Show
+            configuration</button>
+          <div id="googleProxyContainer" style="display: none;">
+            <label for="googleTranslateProxyServer">Translation Server</label><br>
+            <input type="text" id="googleTranslateProxyServer" placeholder="translate.googleapis.com"
+              style="width: 50%;" autocomplete="off" spellcheck="false" class="w3-input"><br>
+            <br>
+            <label for="googleTtsProxyServer">Text-to-speech server</label><br>
+            <input type="text" id="googleTtsProxyServer" placeholder="translate.google.com" style="width: 50%;"
               autocomplete="off" spellcheck="false" class="w3-input"><br>
             <br>
-            <button id="addDeepL" class="w3-button w3-asphalt">Add DeepL Free API</button>
-            <button id="removeDeepL" class="w3-button w3-asphalt">Remove DeepL Free API</button>
-            <p id="deeplApiResponse"></p>
-          </div>
-          <div>
-            <p>If you live in a country with a firewall that blocks the Google translation service and have a server to
-              act as a proxy, you can configure it here.</p>
-            <p>It is important to make it clear that what you are configuring below is not a regular http/https/socks
-              proxy. It is a server created or shared with you. Translation requests will be sent to this server and the
-              server will need to know how to direct this request to Google's servers.</p>
-            <button style="width: 100%;" id="btnShowProxyConfiguration" class="w3-button w3-asphalt"> Show configuration</button>
-            <div id="googleProxyContainer" style="display: none;">
-              <label for="googleTranslateProxyServer">Translation Server</label><br>
-              <input type="text" id="googleTranslateProxyServer" placeholder="translate.googleapis.com"
-                style="width: 50%;" autocomplete="off" spellcheck="false" class="w3-input"><br>
-              <br>
-              <label for="googleTtsProxyServer">Text-to-speech server</label><br>
-              <input type="text" id="googleTtsProxyServer" placeholder="translate.google.com" style="width: 50%;"
-                autocomplete="off" spellcheck="false" class="w3-input"><br>
-              <br>
-              <button id="addGoogleProxy" class="w3-button w3-asphalt">Set Google Proxy</button>
-              <button id="removeGoogleProxy" class="w3-button w3-asphalt">Remove Google Proxy</button>
-            </div>
+            <button id="addGoogleProxy" class="w3-button w3-asphalt">Set Google Proxy</button>
+            <button id="removeGoogleProxy" class="w3-button w3-asphalt">Remove Google Proxy</button>
           </div>
         </div>
-      
-
       </div>
 
-      <div id="style" class="w3-container">
-        <h1>Appearance</h1>
-        <div class="desktopOnly">
-          <b data-i18n="lblSelectPopupInterfaceStyle">Select popup interface style</b>
-          <select id="useOldPopup" class="w3-select w3-round w3-margin">
-            <option value="yes" data-i18n="msgInterfaceSimple">Simple</option>
-            <option value="no" data-i18n="msgInterfaceComplex">Complex</option>
-          </select>
-        </div>
 
+
+      <div id="style" class="w3-container">
+        <h1 data-i18n="msgStyle">Appearance</h1>
         <b data-i18n="lblDarkMode">Dark mode</b>
         <select id="darkMode" class="w3-select w3-round w3-margin">
           <option value="auto" data-i18n="msgAutomatic">Automatic</option>
@@ -445,7 +426,7 @@
         </select>
 
         <div class="desktopOnly">
-            <b data-i18n="popupBlueWhenSiteIsTranslated">Make the pop-up icon blue when the site is translated</b>
+          <b data-i18n="popupBlueWhenSiteIsTranslated">Make the pop-up icon blue when the site is translated</b>
           <select id="popupBlueWhenSiteIsTranslated" class="w3-select w3-round ">
             <option value="yes" data-i18n="msgYes">Yes</option>
             <option value="no" data-i18n="msgNo">No</option>
@@ -457,15 +438,15 @@
             <option value="no">no</option>
             <option value="yes">yes</option>
           </select>
-          <br/>
+          <br />
           <b>Add padding at the beginning or end of the page</b>
           <select id="addPaddingToPage" class="w3-select w3-round ">
             <option value="no">no</option>
             <option value="yes">yes</option>
           </select>
         </div>
-        <br/>
-       <b data-i18n="msgWhenShowMobilePopup">When to show the popup on mobile devices</b>
+        <br />
+        <b data-i18n="msgWhenShowMobilePopup">When to show the popup on mobile devices</b>
         <select id="whenShowMobilePopup" class="w3-select w3-round ">
           <option value="when-necessary" data-i18n="msgWhenNecessary">When necessary</option>
           <option value="only-when-i-touch" data-i18n="msgOnlyWhenItouch3Fingers">Only when I touch three fingers on the
@@ -507,7 +488,7 @@
       </div>
 
       <div id="hotkeys" class="w3-container desktopOnly">
-        <h1>Keyboard Shortcuts</h1>
+        <h1 data-i18n="msgHotkeys">Hotkeys</h1>
         <button data-i18n="openNativeShortcutManager" id="openNativeShortcutManager"
           class="w3-btn w3-asphalt w3-round  w3-margin" style="width: 60%; max-width: 650px">
           Open native shortcut key manager
@@ -536,13 +517,14 @@
       </div>
 
       <div id="storage" class="w3-container">
-        <h1>Storage</h1>
+        <h1 data-i18n="msgStorage">Storage</h1>
         <b data-i18n="lblTranslationCache">Translation cache</b>
         <div class="w3-container">
           <span data-i18n="lblStorageUsed">Storage used:</span>
-          <button id="btnCalculateStorage" data-i18n="calculateStorage" style="font-size: 12px" class="w3-button w3-asphalt w3-round w3-tiny">
+          <button id="btnCalculateStorage" data-i18n="calculateStorage" style="font-size: 12px"
+            class="w3-button w3-asphalt w3-round w3-tiny">
             Calculate</button>
-            <i id="storageUsed">0 KB</i> <br />
+          <i id="storageUsed">0 KB</i> <br />
 
           <b data-i18n="lblEnableDiskCache">Enable persistent translation cache (on-disk cache)</b>
           <select id="enableDiskCache" class="w3-select w3-round w3-margin">

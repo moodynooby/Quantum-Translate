@@ -58,13 +58,6 @@ twpConfig
 
       let text;
       $("#itemSelectedName").textContent = text;
-
-      if (hash === "#translations") {
-        $("#translations").insertBefore(
-          $("#selectServiceContainer"),
-          $("#translations").firstChild
-        );
-      }
     }
     hashchange();
     window.addEventListener("hashchange", hashchange);
@@ -695,11 +688,6 @@ twpConfig
       twpConfig.get("dontShowIfSelectedTextIsUnknown") === "yes" ? true : false;
 
     // style options
-    $("#useOldPopup").onchange = (e) => {
-      twpConfig.set("useOldPopup", e.target.value);
-      updateDarkMode();
-    };
-    $("#useOldPopup").value = twpConfig.get("useOldPopup");
 
     $("#darkMode").onchange = (e) => {
       twpConfig.set("darkMode", e.target.value);
@@ -1121,12 +1109,12 @@ twpConfig
       element.setAttribute(
         "download",
         "twp-backup_" +
-          new Date()
-            .toISOString()
-            .replace(/T/, "_")
-            .replace(/\..+/, "")
-            .replace(/\:/g, ".") +
-          ".txt"
+        new Date()
+          .toISOString()
+          .replace(/T/, "_")
+          .replace(/\..+/, "")
+          .replace(/\:/g, ".") +
+        ".txt"
       );
 
       element.style.display = "none";
@@ -1222,64 +1210,6 @@ twpConfig
     };
 
     // experimental options
-    $("#addLibre").onclick = () => {
-      const libre = {
-        name: "libre",
-        url: $("#libreURL").value,
-        apiKey: $("#libreKEY").value,
-      };
-      try {
-        new URL(libre.url);
-        if (libre.apiKey.length < 10) {
-          throw new Error("Provides an API Key");
-        }
-
-        const customServices = twpConfig.get("customServices");
-
-        const index = customServices.findIndex((cs) => cs.name === "libre");
-        if (index !== -1) {
-          customServices.splice(index, 1);
-        }
-
-        customServices.push(libre);
-        twpConfig.set("customServices", customServices);
-        chrome.runtime.sendMessage({ action: "createLibreService", libre });
-      } catch (e) {
-        alert(e);
-      }
-    };
-
-    $("#removeLibre").onclick = () => {
-      const customServices = twpConfig.get("customServices");
-      const index = customServices.findIndex((cs) => cs.name === "libre");
-
-      if (index !== -1) {
-        customServices.splice(index, 1);
-        twpConfig.set("customServices", customServices);
-        chrome.runtime.sendMessage(
-          { action: "removeLibreService" },
-          checkedLastError
-        );
-      }
-
-      if (twpConfig.get("textTranslatorService") === "libre") {
-        twpConfig.set(
-          "textTranslatorService",
-          twpConfig.get("pageTranslatorService")
-        );
-      }
-
-      $("#libreURL").value = "";
-      $("#libreKEY").value = "";
-    };
-
-    const libre = twpConfig
-      .get("customServices")
-      .find((cs) => cs.name === "libre");
-    if (libre) {
-      $("#libreURL").value = libre.url;
-      $("#libreKEY").value = libre.apiKey;
-    }
 
     async function testDeepLFreeApiKey(apiKey) {
       return await new Promise((resolve) => {

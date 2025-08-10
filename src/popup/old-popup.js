@@ -9,15 +9,10 @@ twpConfig
     twpI18n.translateDocument();
 
     if (!navigator.userAgent.includes("Firefox")) {
-      document.body.style.minWidth = "300px";
+      document.body.style.minWidth = "300px"
     }
 
-    $("#btnImproveTranslation").onclick = () => {
-      window.location = "improve-translation.html";
-    };
-
     // get elements
-    const btnSwitchInterfaces = document.getElementById("btnSwitchInterfaces");
     const divIconTranslateContainer = document.getElementById(
       "divIconTranslateContainer"
     );
@@ -48,6 +43,8 @@ twpConfig
     const divOptionsList = document.getElementById("divOptionsList");
 
     const btnReset = document.getElementById("btnReset");
+    const btnChangeLanguage = document.getElementById("btnChangeLanguage");
+
     const btnTranslate = document.getElementById("btnTranslate");
     const btnRestore = document.getElementById("btnRestore");
     const btnTryAgain = document.getElementById("btnTryAgain");
@@ -76,12 +73,12 @@ twpConfig
       lblTranslate.textContent = twpI18n.getMessage(
         "lblTranslatePageInto",
         langs[twpConfig.get("targetLanguage")] ||
-          twpConfig.get("targetLanguage")
+        twpConfig.get("targetLanguage")
       );
       lblTranslated.textContent = twpI18n.getMessage(
         "lblPageTranslateInto",
         langs[twpConfig.get("targetLanguage")] ||
-          twpConfig.get("targetLanguage")
+        twpConfig.get("targetLanguage")
       );
 
       const langsSorted = [];
@@ -129,13 +126,8 @@ twpConfig
                 border: 1px solid #454a4d;
             }
             
-            #btnSwitchInterfaces:hover {
-                background-color: #454a4d !important;
-                color: rgb(231, 230, 228) !important;
-            } 
-            
             #selectTargetLanguage, #btnReset, #btnRestore, #btnTryAgain {
-                color: #55a9ed !important;
+                color: #0050ef !important;
                 background-color: #181a1b !important;
                 border: 1px solid #454a4d !important;
             }
@@ -345,6 +337,8 @@ twpConfig
 
         divAlwaysTranslate.style.display = "none";
         btnTranslate.style.display = "inline";
+        btnChangeLanguage.style.display = "inline";
+
         btnRestore.style.display = "none";
         btnTryAgain.style.display = "none";
         btnOptionsDiv.style.display = "none";
@@ -365,6 +359,8 @@ twpConfig
 
             divAlwaysTranslate.style.display = "none";
             btnTranslate.style.display = "none";
+            btnChangeLanguage.style.display = "none";
+
             btnRestore.style.display = "inline";
             btnTryAgain.style.display = "none";
             btnOptionsDiv.style.display = "inline";
@@ -381,7 +377,8 @@ twpConfig
             lblError.style.display = "none";
 
             divAlwaysTranslate.style.display = "none";
-            btnTranslate.style.display = "none";
+            btnTranslate.style.display = "none"; btnChangeLanguage.style.display = "none";
+
             btnRestore.style.display = "inline";
             btnTryAgain.style.display = "none";
             btnOptionsDiv.style.display = "none";
@@ -397,7 +394,8 @@ twpConfig
             lblError.style.display = "inline";
 
             divAlwaysTranslate.style.display = "none";
-            btnTranslate.style.display = "none";
+            btnTranslate.style.display = "none"; btnChangeLanguage.style.display = "none";
+
             btnRestore.style.display = "none";
             btnTryAgain.style.display = "inline";
             btnOptionsDiv.style.display = "none";
@@ -415,6 +413,7 @@ twpConfig
               ? void 0
               : cbAlwaysTranslate.setAttribute("disabled", "disabled");
             btnTranslate.style.display = "inline";
+            btnChangeLanguage.style.display = "inline";
             btnRestore.style.display = "none";
             btnTryAgain.style.display = "none";
             btnOptionsDiv.style.display = "inline";
@@ -445,12 +444,12 @@ twpConfig
           lblTranslate.textContent = twpI18n.getMessage(
             "lblTranslatePageInto",
             langs[twpConfig.get("targetLanguage")] ||
-              twpConfig.get("targetLanguage")
+            twpConfig.get("targetLanguage")
           );
           lblTranslated.textContent = twpI18n.getMessage(
             "lblPageTranslateInto",
             langs[twpConfig.get("targetLanguage")] ||
-              twpConfig.get("targetLanguage")
+            twpConfig.get("targetLanguage")
           );
 
           if (twpConfig.get("enableIframePageTranslation") === "yes") {
@@ -469,7 +468,7 @@ twpConfig
                 action: "translatePage",
                 targetLanguage: selectTargetLanguage.value,
               },
-              {frameId: 0},
+              { frameId: 0 },
               checkedLastError
             );
           }
@@ -506,13 +505,9 @@ twpConfig
 
     $("#btnRestore").onclick = () => onRestoreClick();
 
-    $("#btnSwitchInterfaces").addEventListener("click", () => {
-      twpConfig.set("useOldPopup", "no");
-      window.location = "popup.html";
-    });
     $("#btnSettings").addEventListener("click", () => {
       tabsCreate(chrome.runtime.getURL("/options/options.html"));
-});
+    });
 
     $("#divIconTranslate").addEventListener("click", () => {
       currentPageTranslatorService = twpConfig.swapPageTranslationService();
@@ -565,10 +560,6 @@ twpConfig
         (tabs) => {
           const hostname = new URL(tabs[0].url).hostname;
           switch (btnOptions.value) {
-            case "changeLanguage":
-              showSelectTargetLanguage = true;
-              updateInterface();
-              break;
             case "alwaysTranslateThisSite":
               if (
                 twpConfig.get("alwaysTranslateSites").indexOf(hostname) === -1
@@ -686,6 +677,10 @@ twpConfig
         }
       );
     });
+    $("#btnChangeLanguage").onclick = () => {
+      window.location = "improve-translation.html";
+
+    }
 
     chrome.tabs.query(
       {
