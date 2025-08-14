@@ -1,17 +1,18 @@
 
-# <img src="https://github.com/moodynooby/modern_TWP/blob/master/src/icons/icon-128.png" height="50">Modern Translate Web Pages / Quantum Translate
+# Quantum Translate: Minimal Modern Translate
+
 A Modern Translation Extension for Firefox (Unofficially for chromium too).
 Main Things Done  
-- cleaned up UI by removing ads for clean experience and mordernising the ui  
-- made the UI faster
-- 
-### install Firefox
-- Desktop users, download from [Mozilla Addons](https://addons.mozilla.org/en-US/firefox/addon/modern-translate-web-pages/).
 
-## Screenshots
-|                                           Menu 1                                            |                                           Menu 2                                            |                                         Translated                                          |
-| :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
-| <img src="https://addons.mozilla.org/user-media/previews/full/258/258434.png" height="200"> | <img src="https://addons.mozilla.org/user-media/previews/full/258/258435.png" height="200"> | <img src="https://addons.mozilla.org/user-media/previews/full/258/258436.png" height="200"> |
+- cleaned up UI by removing ads for clean experience and mordernising the ui  
+- made It faster
+
+## Install
+
+- For Firefox see -->
+
+- For chrome see -->
+
 ## FAQ
 
 **What can this extension do?**
@@ -19,7 +20,7 @@ Main Things Done
 Your current page is translated without having to open new tabs.
 It is possible to change the translation language.
 You can select to automatically translate.
-To change the translation engine just touch the Google Translate icon. 
+To change the translation engine just touch the Google  icon.
 
 **Why do you need to access your data on all the websites you visit?**
 
@@ -27,19 +28,16 @@ To translate any website it is necessary to access and modify the text of the we
 
 **How are the pages translated?**
 
-The pages are translated any of the major translation engine 
+The pages are translated any of the major translation engine
 
 **And how's my privacy?**
 
-[Privacy policy](https://addons.mozilla.org/addon/traduzir-paginas-web/privacy/): We do not collect any information. However, to translate, the contents of the web pages will be sent to Google or Yandex or Bing servers.
+We do not collect any information. However, to translate, the contents of the web pages will be sent to Google or Yandex or Bing servers.
 
 **Limitations**
 
 Some pages like [support.mozilla.org](https://support.mozilla.org/) and [addons.mozilla.org](http://addons.mozilla.org/) will not be translated. For security reasons, the browser blocks extensions from accessing these sites.
 
 ## Build instructions
+
 - You can see all the build instructions in the [build-instructions.md](build-instructions.md) file.
-
-
-## Release notes
-- You can see all the release notes in the [release-notes.md](release-notes.md) file.

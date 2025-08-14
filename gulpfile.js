@@ -14,16 +14,16 @@ const version = JSON.parse(
   fs.readFileSync("src/manifest.json", "utf8")
 ).version;
 
-const chromium_folder_name = `TWP_${version}_Chromium`;
-const firefox_folder_name = `TWP_${version}_Firefox`;
-const firefox_selfhosted_folder_name = `TWP_${version}_Firefox_selfhosted`;
+const chromium_folder_name = `QT_${version}_Chromium`;
+const firefox_folder_name = `QT_${version}_Firefox`;
+const firefox_selfhosted_folder_name = `QT_${version}_Firefox_selfhosted`;
 
 const mappath = `../maps/${version}`;
 const mapconfig = remoteSourceMaps
   ? {
-      sourceMappingURLPrefix:
-        "https://raw.githubusercontent.com/FilipePS/TWP---Source-Maps/main",
-    }
+    sourceMappingURLPrefix:
+      "https://raw.githubusercontent.com/FilipePS/QT---Source-Maps/main",
+  }
   : null;
 
 const babelConfig = {
@@ -53,7 +53,7 @@ gulp.task("clean", (cb) => {
 
 gulp.task("firefox-copy", () => {
   return gulp
-    .src(["src/**/**"], {encoding: false})
+    .src(["src/**/**"], { encoding: false })
     .pipe(gulp.dest(`build/${firefox_folder_name}`));
 });
 
@@ -61,7 +61,7 @@ gulp.task("firefox-babel", () => {
   return Promise.all([
     new Promise((resolve, reject) => {
       gulp
-        .src([`build/${firefox_folder_name}/background/*.js`], {encoding: false})
+        .src([`build/${firefox_folder_name}/background/*.js`], { encoding: false })
         .pipe(sourcemaps.init())
         .pipe(babel(babelConfig))
         .pipe(sourcemaps.write(mappath, mapconfig))
@@ -71,7 +71,7 @@ gulp.task("firefox-babel", () => {
     }),
     new Promise((resolve, reject) => {
       gulp
-        .src([`build/${firefox_folder_name}/lib/*.js`], {encoding: false})
+        .src([`build/${firefox_folder_name}/lib/*.js`], { encoding: false })
         .pipe(sourcemaps.init())
         .pipe(babel(babelConfig))
         .pipe(sourcemaps.write(mappath, mapconfig))
@@ -81,7 +81,7 @@ gulp.task("firefox-babel", () => {
     }),
     new Promise((resolve, reject) => {
       gulp
-        .src([`build/${firefox_folder_name}/contentScript/*.js`], {encoding: false})
+        .src([`build/${firefox_folder_name}/contentScript/*.js`], { encoding: false })
         .pipe(sourcemaps.init())
         .pipe(babel(babelConfig))
         .pipe(sourcemaps.write(mappath, mapconfig))
@@ -91,7 +91,7 @@ gulp.task("firefox-babel", () => {
     }),
     new Promise((resolve, reject) => {
       gulp
-        .src([`build/${firefox_folder_name}/options/*.js`], {encoding: false})
+        .src([`build/${firefox_folder_name}/options/*.js`], { encoding: false })
         .pipe(sourcemaps.init())
         .pipe(babel(babelConfig))
         .pipe(sourcemaps.write(mappath, mapconfig))
@@ -101,7 +101,7 @@ gulp.task("firefox-babel", () => {
     }),
     new Promise((resolve, reject) => {
       gulp
-        .src([`build/${firefox_folder_name}/popup/*.js`], {encoding: false})
+        .src([`build/${firefox_folder_name}/popup/*.js`], { encoding: false })
         .pipe(sourcemaps.init())
         .pipe(babel(babelConfig))
         .pipe(sourcemaps.write(mappath, mapconfig))
@@ -118,7 +118,7 @@ gulp.task("firefox-move-sourcemap", (cb) => {
   }
   return new Promise((resolve, reject) => {
     gulp
-      .src([`build/${firefox_folder_name}/maps/**/*`], {encoding: false})
+      .src([`build/${firefox_folder_name}/maps/**/*`], { encoding: false })
       .pipe(gulp.dest("build/maps"))
       .on("error", reject)
       .on("end", resolve);
@@ -133,7 +133,7 @@ gulp.task("firefox-move-sourcemap", (cb) => {
 gulp.task("firefox-self-hosted", (cb) => {
   return new Promise((resolve, reject) => {
     gulp
-      .src([`build/${firefox_folder_name}/**/**`], {encoding: false})
+      .src([`build/${firefox_folder_name}/**/**`], { encoding: false })
       .pipe(gulp.dest(`build/${firefox_selfhosted_folder_name}`))
       .on("error", reject)
       .on("end", resolve);
@@ -156,21 +156,21 @@ gulp.task("firefox-self-hosted", (cb) => {
 
 gulp.task("firefox-zip", () => {
   return gulp
-    .src([`build/${firefox_folder_name}/**/*`], {encoding: false})
-    .pipe(zip(`TWP_${version}_Firefox.zip`))
+    .src([`build/${firefox_folder_name}/**/*`], { encoding: false })
+    .pipe(zip(`QT_${version}_Firefox.zip`))
     .pipe(gulp.dest("build"));
 });
 
 gulp.task("firefox-self-hosted-zip", () => {
   return gulp
-    .src([`build/${firefox_selfhosted_folder_name}/**/*`], {encoding: false})
-    .pipe(zip(`TWP_${version}_Firefox_selfhosted.zip`))
+    .src([`build/${firefox_selfhosted_folder_name}/**/*`], { encoding: false })
+    .pipe(zip(`QT_${version}_Firefox_selfhosted.zip`))
     .pipe(gulp.dest("build"));
 });
 
 gulp.task("chrome-copy-from-firefox", () => {
   return gulp
-    .src([`build/${firefox_folder_name}/**/**`], {encoding: false})
+    .src([`build/${firefox_folder_name}/**/**`], { encoding: false })
     .pipe(gulp.dest(`build/${chromium_folder_name}`));
 });
 
@@ -188,7 +188,7 @@ gulp.task("chrome-rename", (cb) => {
 
 gulp.task("chrome-zip", () => {
   return gulp
-    .src([`build/${chromium_folder_name}/**/**`], {encoding: false})
+    .src([`build/${chromium_folder_name}/**/**`], { encoding: false })
     .pipe(zip(`${chromium_folder_name}.zip`))
     .pipe(gulp.dest("build"));
 });
