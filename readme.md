@@ -9,9 +9,7 @@ Main Things Done
 
 ## Install
 
-- For Firefox see -->
-
-- For chrome see -->
+See the releases
 
 ## FAQ
 
