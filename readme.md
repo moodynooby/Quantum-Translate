@@ -1,41 +1,75 @@
+# Quantum Translate
 
-# Quantum Translate: Minimal Modern Translate
+*A Modern, Fast Translation Extension for Firefox (with unofficial Chromium support)*
 
-A Modern Translation Extension for Firefox (Unofficially for chromium too).
-Main Things Done  
+Quantum Translate is built for speed and simplicity. With a streamlined interface and faster translation performance, it brings a clean, modern experience to browsing in multiple languages. Unlike older translation tools, it avoids clutter, distractions, and unnecessary steps, allowing you to stay focused on the page.
 
-- cleaned up UI by removing ads for clean experience and mordernising the ui  
-- made It faster
+***
 
-## Install
+## Release Notes
+   ### V100 
 
-See the releases
+    First public release of Quantum Translate
 
-## FAQ
+    Clean, modern user interface with no ads or clutter
 
-**What can this extension do?**
+    Optimized for faster translation and smoother page loading
 
-Your current page is translated without having to open new tabs.
-It is possible to change the translation language.
-You can select to automatically translate.
-To change the translation engine just touch the Google  icon.
+    Support for multiple translation engines (Google, Yandex, Bing)
 
-**Why do you need to access your data on all the websites you visit?**
+    Option to auto‑translate pages or choose language manually
 
-To translate any website it is necessary to access and modify the text of the web pages. And the extension can only do that, with that permission.
+    Improved compatibility with Firefox and unofficial support for Chromium
 
-**How are the pages translated?**
+## Key Highlights
 
-The pages are translated any of the major translation engine
+- **Modern Design:** A clean, distraction-free interface designed to feel natural in your browser.
+- **Faster Performance:** Optimized for quicker translations, making pages feel seamless and responsive.
+- **In-Page Translation:** Translate the page you’re viewing directly, without opening new tabs.
+- **Flexible Options:**
+    - Choose the target language.
+    - Switch between multiple translation engines (Google, Yandex, Bing).
+    - Enable automatic translation for selected sites.
 
-**And how's my privacy?**
+***
 
-We do not collect any information. However, to translate, the contents of the web pages will be sent to Google or Yandex or Bing servers.
+## Privacy and Permissions
 
-**Limitations**
+- Access to site content is required in order to translate text directly on webpages.
+- No personal data is collected or stored by the extension.
+- Translations are carried out by the selected provider (Google, Yandex, or Bing), which receives only the text necessary for translation.
 
-Some pages like [support.mozilla.org](https://support.mozilla.org/) and [addons.mozilla.org](http://addons.mozilla.org/) will not be translated. For security reasons, the browser blocks extensions from accessing these sites.
+Note: Certain restricted sites, such as `addons.mozilla.org` and `support.mozilla.org`, cannot be translated due to browser security rules.
 
-## Build instructions
+***
 
-- You can see all the build instructions in the [build-instructions.md](build-instructions.md) file.
+## Installation
+
+1. Download the latest release from the releases section.
+2. Install the extension through your browser’s extension manager. Firefox is fully supported, with Chromium compatibility available for advanced users.
+
+***
+
+## Building from Source
+
+Developers can find detailed instructions in the provided [build-instructions.md](build-instructions.md) file.
+
+***
+
+## Frequently Asked Questions
+
+**What makes Quantum Translate different?**
+It is faster, cleaner, and designed with a modern interface, making translation feel like a natural part of browsing.
+
+**Why does it request access to all websites?**
+This is required to modify and translate text on any webpage.
+
+**Does the extension track me?**
+No. The extension does not store or collect user information. Only the text needed for translation is sent to the chosen engine.
+
+***
+
+This version has a **human, technical tone**—lean, clear, and modern, without the typical AI “shine.”
+
+Would you like me to draft a **short, one-paragraph version** as well—something that would fit perfectly in a browser extension store listing?
+
