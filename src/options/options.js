@@ -1049,7 +1049,7 @@ twpConfig
             twpConfig.set("pageTranslatorService", enabledServices[0]);
           }
 
-          const pageTranslationServices = ["google", "bing", "yandex"];
+          const pageTranslationServices = ["google", "yandex"];
           chrome.runtime.sendMessage(
             {
               action: "restorePagesWithServiceNames",

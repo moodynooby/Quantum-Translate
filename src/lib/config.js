@@ -10,10 +10,10 @@ const twpConfig = (function () {
    */
   const defaultConfig = {
     uiLanguage: "default",
-    pageTranslatorService: "google", // google yandex bing
-    textTranslatorService: "google", // google yandex bing deepl
+    pageTranslatorService: "google", // google yandex 
+    textTranslatorService: "google", // google yandex deepl
     textToSpeechService: "google", // google bing
-    enabledServices: ["google", "bing", "yandex", "deepl"],
+    enabledServices: ["google", "yandex", "deepl"],
     ttsSpeed: 1.0,
     ttsVolume: 1.0,
     targetLanguage: null,

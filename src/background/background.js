@@ -190,12 +190,6 @@ function updateContextMenu(pageLanguageState = "original") {
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason == "install") {
     tabsCreate(chrome.runtime.getURL("/options/options.html"));
-    twpConfig.onReady(async () => {
-      if (chrome.i18n.getUILanguage() === "zh-CN") {
-        twpConfig.set("pageTranslatorService", "bing");
-        twpConfig.set("textTranslatorService", "bing");
-      }
-    });
   } else if (
     details.reason == "update" &&
     chrome.runtime.getManifest().version != details.previousVersion
@@ -209,35 +203,6 @@ chrome.runtime.onInstalled.addListener((details) => {
           twpConfig.set("alwaysTranslateSites", []);
         }
         return;
-      }
-      if (twpConfig.get("showReleaseNotes") !== "yes") return;
-      let lastTimeShowingReleaseNotes = twpConfig.get(
-        "lastTimeShowingReleaseNotes"
-      );
-      let showReleaseNotes = false;
-      if (lastTimeShowingReleaseNotes) {
-        const date = new Date();
-        date.setDate(date.getDate() - 26);
-        if (date.getTime() > lastTimeShowingReleaseNotes) {
-          showReleaseNotes = true;
-          lastTimeShowingReleaseNotes = Date.now();
-          twpConfig.set(
-            "lastTimeShowingReleaseNotes",
-            lastTimeShowingReleaseNotes
-          );
-        }
-      } else {
-        showReleaseNotes = true;
-        lastTimeShowingReleaseNotes = Date.now();
-        twpConfig.set(
-          "lastTimeShowingReleaseNotes",
-          lastTimeShowingReleaseNotes
-        );
-      }
-      if (showReleaseNotes) {
-        tabsCreate(
-          chrome.runtime.getURL("/options/options.html#release_notes")
-        );
       }
     });
     twpConfig.onReady(async () => {

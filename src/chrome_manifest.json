@@ -4,7 +4,7 @@
   "name": "QuantumTranslate",
   "description": "__MSG_extensionDescription__",
   "version": "100",
-  "homepage_url": "https://github.com/moodynooby/Quantum-Translate-ModernTWP",
+  "homepage_url": "https://github.com/moodynooby/Quantum-Translate",
   "update_url": "https://raw.githubusercontent.com/moodynooby/Modern_TWP/master/dist/chromium/updates.xml",
   "minimum_chrome_version": "70.0",
   "commands": {
@@ -60,7 +60,6 @@
   "web_accessible_resources": [
     "/icons/icon-32.png",
     "/icons/google-translate-32.png",
-    "/icons/bing-translate-32.png",
     "/icons/yandex-translate-32.png",
     "/icons/swap-32.png",
     "/contentScript/css/*",

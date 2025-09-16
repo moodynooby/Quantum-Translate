@@ -15,7 +15,7 @@ Quantum Translate is built for speed and simplicity. With a streamlined interfac
 
     Optimized for faster translation and smoother page loading
 
-    Support for multiple translation engines (Google, Yandex, Bing)
+    Support for multiple translation engines (Google or Yandex)
 
     Option to auto‑translate pages or choose language manually
 
@@ -28,7 +28,7 @@ Quantum Translate is built for speed and simplicity. With a streamlined interfac
 - **In-Page Translation:** Translate the page you’re viewing directly, without opening new tabs.
 - **Flexible Options:**
     - Choose the target language.
-    - Switch between multiple translation engines (Google, Yandex, Bing).
+    - Switch between multiple translation engines (Google or Yandex).
     - Enable automatic translation for selected sites.
 
 ***
@@ -37,7 +37,7 @@ Quantum Translate is built for speed and simplicity. With a streamlined interfac
 
 - Access to site content is required in order to translate text directly on webpages.
 - No personal data is collected or stored by the extension.
-- Translations are carried out by the selected provider (Google, Yandex, or Bing), which receives only the text necessary for translation.
+- Translations are carried out by the selected provider (Google or Yandex), which receives only the text necessary for translation.
 
 Note: Certain restricted sites, such as `addons.mozilla.org` and `support.mozilla.org`, cannot be translated due to browser security rules.
 
@@ -66,10 +66,4 @@ This is required to modify and translate text on any webpage.
 
 **Does the extension track me?**
 No. The extension does not store or collect user information. Only the text needed for translation is sent to the chosen engine.
-
-***
-
-This version has a **human, technical tone**—lean, clear, and modern, without the typical AI “shine.”
-
-Would you like me to draft a **short, one-paragraph version** as well—something that would fit perfectly in a browser extension store listing?
 

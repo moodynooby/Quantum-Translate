@@ -252,10 +252,6 @@ twpConfig
           "src",
           "/icons/yandex-translate-32.png"
         );
-      } else if (currentPageTranslatorService == "bing") {
-        $("#btnOptions option[value='translateInExternalSite']").textContent =
-          twpI18n.getMessage("btnOpenOnGoogleTranslate");
-        $("#iconTranslate").setAttribute("src", "/icons/bing-translate-32.png");
       } else {
         // google
         $("#btnOptions option[value='translateInExternalSite']").textContent =

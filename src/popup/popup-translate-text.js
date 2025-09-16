@@ -149,7 +149,6 @@ twpConfig
 
     const sGoogle = document.getElementById("sGoogle");
     const sYandex = document.getElementById("sYandex");
-    const sBing = document.getElementById("sBing");
     const sDeepL = document.getElementById("sDeepL");
     const sLibre = document.getElementById("sLibre");
     const eCopy = document.getElementById("copy");
@@ -191,7 +190,6 @@ twpConfig
 
       sGoogle.classList.remove("selected");
       sYandex.classList.remove("selected");
-      sBing.classList.remove("selected");
       sDeepL.classList.remove("selected");
       sLibre.classList.remove("selected");
 
@@ -204,24 +202,10 @@ twpConfig
 
       sGoogle.classList.remove("selected");
       sYandex.classList.remove("selected");
-      sBing.classList.remove("selected");
       sDeepL.classList.remove("selected");
       sLibre.classList.remove("selected");
 
       sYandex.classList.add("selected");
-    };
-    sBing.onclick = () => {
-      currentTextTranslatorService = "bing";
-      twpConfig.set("textTranslatorService", "bing");
-      translateText();
-
-      sGoogle.classList.remove("selected");
-      sYandex.classList.remove("selected");
-      sBing.classList.remove("selected");
-      sDeepL.classList.remove("selected");
-      sLibre.classList.remove("selected");
-
-      sBing.classList.add("selected");
     };
     sDeepL.onclick = () => {
       currentTextTranslatorService = "deepl";
@@ -230,7 +214,6 @@ twpConfig
 
       sGoogle.classList.remove("selected");
       sYandex.classList.remove("selected");
-      sBing.classList.remove("selected");
       sDeepL.classList.remove("selected");
       sLibre.classList.remove("selected");
 
@@ -243,7 +226,6 @@ twpConfig
 
       sGoogle.classList.remove("selected");
       sYandex.classList.remove("selected");
-      sBing.classList.remove("selected");
       sDeepL.classList.remove("selected");
       sLibre.classList.remove("selected");
 
@@ -342,9 +324,6 @@ twpConfig
       case "deepl":
         sDeepL.classList.add("selected");
         break;
-      case "bing":
-        sBing.classList.add("selected");
-        break;
       case "google":
         sGoogle.classList.add("selected");
         break;
@@ -360,11 +339,6 @@ twpConfig
       sGoogle.removeAttribute("hidden");
     } else {
       sGoogle.setAttribute("hidden", "");
-    }
-    if (enabledServices.includes("bing")) {
-      sBing.removeAttribute("hidden");
-    } else {
-      sBing.setAttribute("hidden", "");
     }
     if (enabledServices.includes("yandex")) {
       sYandex.removeAttribute("hidden");
@@ -390,11 +364,6 @@ twpConfig
             sGoogle.removeAttribute("hidden");
           } else {
             sGoogle.setAttribute("hidden", "");
-          }
-          if (enabledServices.includes("bing")) {
-            sBing.removeAttribute("hidden");
-          } else {
-            sBing.setAttribute("hidden", "");
           }
           if (enabledServices.includes("yandex")) {
             sYandex.removeAttribute("hidden");
