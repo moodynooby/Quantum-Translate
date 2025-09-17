@@ -3,9 +3,8 @@
   "default_locale": "en",
   "name": "QuantumTranslate",
   "description": "__MSG_extensionDescription__",
-  "version": "100",
+  "version": "1",
   "homepage_url": "https://github.com/moodynooby/Quantum-Translate",
-  "update_url": "https://raw.githubusercontent.com/moodynooby/Modern_TWP/master/dist/chromium/updates.xml",
   "minimum_chrome_version": "70.0",
   "commands": {
     "hotkey-toggle-translation": {

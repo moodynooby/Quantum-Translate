@@ -150,7 +150,6 @@ twpConfig
     const sGoogle = document.getElementById("sGoogle");
     const sYandex = document.getElementById("sYandex");
     const sDeepL = document.getElementById("sDeepL");
-    const sLibre = document.getElementById("sLibre");
     const eCopy = document.getElementById("copy");
     const eListenOriginal = document.getElementById("listenOriginal");
     const eListenTranslated = document.getElementById("listenTranslated");
@@ -191,7 +190,6 @@ twpConfig
       sGoogle.classList.remove("selected");
       sYandex.classList.remove("selected");
       sDeepL.classList.remove("selected");
-      sLibre.classList.remove("selected");
 
       sGoogle.classList.add("selected");
     };
@@ -203,7 +201,6 @@ twpConfig
       sGoogle.classList.remove("selected");
       sYandex.classList.remove("selected");
       sDeepL.classList.remove("selected");
-      sLibre.classList.remove("selected");
 
       sYandex.classList.add("selected");
     };
@@ -215,21 +212,8 @@ twpConfig
       sGoogle.classList.remove("selected");
       sYandex.classList.remove("selected");
       sDeepL.classList.remove("selected");
-      sLibre.classList.remove("selected");
 
       sDeepL.classList.add("selected");
-    };
-    sLibre.onclick = () => {
-      currentTextTranslatorService = "libre";
-      twpConfig.set("textTranslatorService", "libre");
-      translateText();
-
-      sGoogle.classList.remove("selected");
-      sYandex.classList.remove("selected");
-      sDeepL.classList.remove("selected");
-      sLibre.classList.remove("selected");
-
-      sLibre.classList.add("selected");
     };
 
     const setTargetLanguage = document.getElementById("setTargetLanguage");
@@ -327,8 +311,6 @@ twpConfig
       case "google":
         sGoogle.classList.add("selected");
         break;
-      case "libre":
-        sLibre.classList.add("selected");
       default:
         sGoogle.classList.add("selected");
         break;
@@ -350,11 +332,6 @@ twpConfig
     } else {
       sDeepL.setAttribute("hidden", "");
     }
-    if (twpConfig.get("customServices").find((cs) => cs.name === "libre")) {
-      sLibre.removeAttribute("hidden");
-    } else {
-      sLibre.setAttribute("hidden", "");
-    }
 
     twpConfig.onChanged((name, newvalue) => {
       switch (name) {
@@ -374,14 +351,6 @@ twpConfig
             sDeepL.removeAttribute("hidden");
           } else {
             sDeepL.setAttribute("hidden", "");
-          }
-          break;
-        }
-        case "customServices": {
-          if (newvalue.find((cs) => cs.name === "libre")) {
-            sLibre.removeAttribute("hidden");
-          } else {
-            sLibre.setAttribute("hidden", "");
           }
           break;
         }

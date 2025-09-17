@@ -60,8 +60,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     updateContextMenu(request.pageLanguageState);
   } else if (request.action === "openOptionsPage") {
     tabsCreate(chrome.runtime.getURL("/options/options.html"));
-  } else if (request.action === "openDonationPage") {
-    tabsCreate(chrome.runtime.getURL("/options/options.html#donation"));
   } else if (request.action === "detectTabLanguage") {
     if (!sender.tab) {
       // https://github.com/FilipePS/Traduzir-paginas-web/issues/478

@@ -15,5 +15,4 @@
 
 - Run the command `npm install` to make sure you have correct dependencies .
 - To make the build that adds compatibility with previous versions of browsers, run the command `npm run build:local-sourcemaps`.
-- The files I sent for review were built with the `npm run build` command. The difference is that the **source-maps** were outside the extension folder, with a configured Github URL. I upload the source-maps to this repository: <https://github.com/FilipePS/TWP---Source-Maps>
-- The reason I use remote **source-maps** is to reduce the download size of the extension, but still allow users to easily debug without needing the original source code.
+- The files I sent for review were built with the `npm run build` command.

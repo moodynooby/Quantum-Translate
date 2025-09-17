@@ -260,10 +260,8 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
 				<div id="moreOrLess"><i class="arrow up" id="more"></i><i class="arrow down" id="less"></i></div>
 				<ul>
 					<li title="Google" id="sGoogle">g</li>
-					<li title="Bing" id="sBing">b</li>
 					<li title="Yandex" id="sYandex">y</li>
 					<li title="DeepL" id="sDeepL" hidden>d</li>
-					<li title="Libretranslate" id="sLibre" hidden>l</li>
 					<li style="opacity: 0; cursor: move;">O</li>
 				</ul>
 			</div>
@@ -394,9 +392,7 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
 
     const sGoogle = shadowRoot.getElementById("sGoogle");
     const sYandex = shadowRoot.getElementById("sYandex");
-    const sBing = shadowRoot.getElementById("sBing");
     const sDeepL = shadowRoot.getElementById("sDeepL");
-    const sLibre = shadowRoot.getElementById("sLibre");
     const eCopy = shadowRoot.getElementById("copy");
     const eReplace = shadowRoot.getElementById("replace");
     const eListenOriginal = shadowRoot.getElementById("listenOriginal");
@@ -503,9 +499,7 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
 
       sGoogle.classList.remove("selected");
       sYandex.classList.remove("selected");
-      sBing.classList.remove("selected");
       sDeepL.classList.remove("selected");
-      sLibre.classList.remove("selected");
 
       sGoogle.classList.add("selected");
     };
@@ -516,24 +510,9 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
 
       sGoogle.classList.remove("selected");
       sYandex.classList.remove("selected");
-      sBing.classList.remove("selected");
       sDeepL.classList.remove("selected");
-      sLibre.classList.remove("selected");
 
       sYandex.classList.add("selected");
-    };
-    sBing.onclick = () => {
-      currentTextTranslatorService = "bing";
-      twpConfig.set("textTranslatorService", "bing");
-      translateNewInput();
-
-      sGoogle.classList.remove("selected");
-      sYandex.classList.remove("selected");
-      sBing.classList.remove("selected");
-      sDeepL.classList.remove("selected");
-      sLibre.classList.remove("selected");
-
-      sBing.classList.add("selected");
     };
     sDeepL.onclick = () => {
       if (
@@ -548,27 +527,11 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
 
         sGoogle.classList.remove("selected");
         sYandex.classList.remove("selected");
-        sBing.classList.remove("selected");
         sDeepL.classList.remove("selected");
-        sLibre.classList.remove("selected");
 
         sDeepL.classList.add("selected");
       }
     };
-    sLibre.onclick = () => {
-      currentTextTranslatorService = "libre";
-      twpConfig.set("textTranslatorService", "libre");
-      translateNewInput();
-
-      sGoogle.classList.remove("selected");
-      sYandex.classList.remove("selected");
-      sBing.classList.remove("selected");
-      sDeepL.classList.remove("selected");
-      sLibre.classList.remove("selected");
-
-      sLibre.classList.add("selected");
-    };
-
     const setTargetLanguage = shadowRoot.getElementById("setTargetLanguage");
     setTargetLanguage.onclick = (e) => {
       if (e.target.getAttribute("value")) {
@@ -671,10 +634,6 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
       sYandex.classList.add("selected");
     } else if (currentTextTranslatorService == "deepl") {
       sDeepL.classList.add("selected");
-    } else if (currentTextTranslatorService == "bing") {
-      sBing.classList.add("selected");
-    } else if (currentTextTranslatorService == "libre") {
-      sLibre.classList.add("selected");
     } else {
       sGoogle.classList.add("selected");
     }
@@ -684,11 +643,6 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
       sGoogle.removeAttribute("hidden");
     } else {
       sGoogle.setAttribute("hidden", "");
-    }
-    if (enabledServices.includes("bing")) {
-      sBing.removeAttribute("hidden");
-    } else {
-      sBing.setAttribute("hidden", "");
     }
     if (enabledServices.includes("yandex")) {
       sYandex.removeAttribute("hidden");
@@ -700,12 +654,6 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
     } else {
       sDeepL.setAttribute("hidden", "");
     }
-    if (twpConfig.get("customServices").find((cs) => cs.name === "libre")) {
-      sLibre.removeAttribute("hidden");
-    } else {
-      sLibre.setAttribute("hidden", "");
-    }
-
     if (
       twpConfig.get("expandPanelTranslateSelectedText") === "yes" ||
       (prevSelectionInfo &&
@@ -732,11 +680,6 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
           } else {
             sGoogle.setAttribute("hidden", "");
           }
-          if (enabledServices.includes("bing")) {
-            sBing.removeAttribute("hidden");
-          } else {
-            sBing.setAttribute("hidden", "");
-          }
           if (enabledServices.includes("yandex")) {
             sYandex.removeAttribute("hidden");
           } else {
@@ -746,14 +689,6 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
             sDeepL.removeAttribute("hidden");
           } else {
             sDeepL.setAttribute("hidden", "");
-          }
-          break;
-        }
-        case "customServices": {
-          if (newvalue.find((cs) => cs.name === "libre")) {
-            sLibre.removeAttribute("hidden");
-          } else {
-            sLibre.setAttribute("hidden", "");
           }
           break;
         }

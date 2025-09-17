@@ -3,11 +3,11 @@
   "default_locale": "en",
   "name": "QuantumTranslate",
   "description": "__MSG_extensionDescription__",
-  "version": "100",
+  "version": "1",
   "homepage_url": "https://github.com/moodynooby/Quantum-Translate",
   "browser_specific_settings": {
     "gecko": {
-      "id": "{046a21b4-5e72-4d05-a06c-cba2d2c2134a}",
+      "id": "{1b500712-aef7-4e2b-b0ac-e93470a22f87}",
       "strict_min_version": "63.0"
     }
   },
