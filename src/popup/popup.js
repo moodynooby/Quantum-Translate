@@ -18,6 +18,7 @@ twpConfig
     const statusError = $("#status-error");
     const statusContainer = $("#status-container");
     const btnOptions = $("#btn-options");
+    const btnSwapLanguages = $("#swap-languages");
 
     let originalTabLanguage = "und";
     let currentPageLanguage = "und";
@@ -100,6 +101,19 @@ twpConfig
         targetLanguageTo.textContent = langs[selectTargetLanguage.value];
         translateTargetLanguageText.style.display = "flex";
         selectTargetLanguageContainer.style.display = "none";
+    });
+
+    btnSwapLanguages.addEventListener("click", () => {
+        const originalLang = selectOriginalLanguage.value;
+        const targetLang = selectTargetLanguage.value;
+
+        selectOriginalLanguage.value = targetLang;
+        selectTargetLanguage.value = originalLang;
+
+        originalLanguageFrom.textContent = langs[targetLang];
+        targetLanguageTo.textContent = langs[originalLang];
+
+        originalTabLanguage = targetLang;
     });
 
     const translate = () => {
@@ -305,9 +319,6 @@ twpConfig
                                 );
                             }
                         );
-                        break;
-                    case "translatePDF":
-                        tabsCreate("https://pdf.translatewebpages.org/");
                         break;
                     case "Settings":
                         chrome.runtime.openOptionsPage();

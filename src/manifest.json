@@ -3,7 +3,7 @@
   "default_locale": "en",
   "name": "QuantumTranslate",
   "description": "__MSG_extensionDescription__",
-  "version": "1.1",
+  "version": "2",
   "homepage_url": "https://github.com/moodynooby/Quantum-Translate",
   "browser_specific_settings": {
     "gecko": {
@@ -24,12 +24,6 @@
       },
       "description": "__MSG_msgTranslateSelectedText__"
     },
-    "hotkey-swap-page-translation-service": {
-      "suggested_key": {
-        "default": "Ctrl+Alt+Q"
-      },
-      "description": "__MSG_swapTranslationService__"
-    },
     "hotkey-show-original": {
       "suggested_key": {
         "default": "Shift+Alt+0"
@@ -41,18 +35,6 @@
         "default": "Shift+Alt+1"
       },
       "description": "__MSG_lblTranslatePageToTargetLanguage__ 1"
-    },
-    "hotkey-translate-page-2": {
-      "suggested_key": {
-        "default": "Shift+Alt+2"
-      },
-      "description": "__MSG_lblTranslatePageToTargetLanguage__ 2"
-    },
-    "hotkey-translate-page-3": {
-      "suggested_key": {
-        "default": "Shift+Alt+3"
-      },
-      "description": "__MSG_lblTranslatePageToTargetLanguage__ 3"
     },
     "hotkey-hot-translate-selected-text": {
       "suggested_key": {
@@ -72,6 +54,7 @@
     "activeTab",
     "contextMenus",
     "webRequest"
+
   ],
   "optional_permissions": [
     "webNavigation"

@@ -335,12 +335,6 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
   "math", "mjx-container", "tex-math" // https://github.com/FilipePS/Traduzir-paginas-web/issues/704
   ];
 
-  if (location.hostname === "pdf.translatewebpages.org") {
-    const index = htmlTagsInlineText.indexOf("span");
-    if (index !== -1) {
-      htmlTagsInlineText.splice(index, 1);
-    }
-  }
 
   // https://github.com/FilipePS/Traduzir-paginas-web/issues/609
   if (
@@ -833,32 +827,9 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
   function translateTextContent(node, parentNode, text, toRestore) {
     toRestore.translatedText = text;
 
-    if (location.hostname === "pdf.translatewebpages.org") {
-      if (
-        parentNode &&
-        parentNode.nodeName.toLowerCase() === "span" &&
-        parentNode.getAttribute("role") === "presentation"
-      ) {
-        const oldClientWidth = node.parentNode.clientWidth;
-        node.textContent = text;
-        const newClientWidth = node.parentNode.clientWidth;
-        const transformMatch = parentNode.style.transform.match(
-          /[0-9]+[\.]{1,1}[0-9]*/
-        );
-        const currentScaleX = transformMatch
-          ? parseFloat(transformMatch[0])
-          : 1.0;
-        toRestore.originalScale = currentScaleX;
-        parentNode.style.transform = `scaleX(${
-          currentScaleX *
-          Math.min(currentScaleX, oldClientWidth / newClientWidth)
-        })`;
-      } else {
-        node.textContent = text;
-      }
-    } else {
+    
       node.textContent = text;
-    }
+    
   }
 
   function translateResults(piecesToTranslateNow, results) {
@@ -1137,12 +1108,6 @@ Promise.all([twpConfig.onReady(), getTabHostName()]).then(function (_) {
     ) {
       document.body.classList.remove("notranslate");
     }
-
-    if (location.hostname === "pdf.translatewebpages.org") {
-      document.getElementById("scaleSelect").value = "1.5";
-      document.getElementById("scaleSelect").dispatchEvent(new Event("change"));
-    }
-
     piecesToTranslate = getPiecesToTranslate();
     attributesToTranslate = getAttributesToTranslate();
 

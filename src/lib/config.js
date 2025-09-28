@@ -28,7 +28,7 @@ const twpConfig = (function () {
     customDictionary: new Map(),
     showTranslatePageContextMenu: "yes",
     showTranslateSelectedContextMenu: "yes",
-    showButtonInTheAddressBar: "yes",
+    showButtonInTheAddressBar: "no",
     showOriginalTextWhenHovering: "no",
     showTranslateSelectedButton: "yes",
     whenShowMobilePopup: "when-necessary", // when-necessary only-when-i-touch always-show
