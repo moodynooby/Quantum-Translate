@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "default_locale": "en",
-  "name": "QuantumTranslate",
+  "name": "QuickyTranslate",
   "description": "__MSG_extensionDescription__",
   "version": "1",
   "homepage_url": "https://github.com/moodynooby/Quantum-Translate",
@@ -57,9 +57,6 @@
   ],
   "web_accessible_resources": [
     "/icons/icon-32.png",
-    "/icons/google-translate-32.png",
-    "/icons/yandex-translate-32.png",
-    "/icons/swap-32.png",
     "/contentScript/css/*",
     "/contentScript/html/*",
     "/_locales/*",

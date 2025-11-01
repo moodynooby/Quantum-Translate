@@ -1,13 +1,13 @@
 {
   "manifest_version": 2,
   "default_locale": "en",
-  "name": "QuantumTranslate",
+  "name": "QuickyTranslate",
   "description": "__MSG_extensionDescription__",
   "version": "2",
   "homepage_url": "https://github.com/moodynooby/Quantum-Translate",
   "browser_specific_settings": {
     "gecko": {
-      "id": "{1b500712-aef7-4e2b-b0ac-e93470a22f87}",
+      "id": "{1b500712-2ef7-4e2b-b0ac-e93470a22f87}",
       "strict_min_version": "63.0"
     }
   },
@@ -61,9 +61,6 @@
   ],
   "web_accessible_resources": [
     "/icons/icon-32.png",
-    "/icons/google-translate-32.png",
-    "/icons/yandex-translate-32.png",
-    "/icons/swap-32.png",
     "/contentScript/css/*",
     "/contentScript/html/*",
     "/_locales/*",
